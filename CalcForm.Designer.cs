@@ -40,8 +40,24 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.jonFeeAprComboBox = new System.Windows.Forms.ComboBox();
+            this.jonAprComboBox = new System.Windows.Forms.ComboBox();
+            this.aprAprComboBox = new System.Windows.Forms.ComboBox();
+            this.jonFeeAmountBox = new System.Windows.Forms.TextBox();
+            this.jonAmountBox = new System.Windows.Forms.TextBox();
+            this.aprAmountBox = new System.Windows.Forms.TextBox();
             this.jonFeePayableComboBox = new System.Windows.Forms.ComboBox();
             this.jonPayableComboBox = new System.Windows.Forms.ComboBox();
             this.aprPayableComboBox = new System.Windows.Forms.ComboBox();
@@ -56,25 +72,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.aprAmountBox = new System.Windows.Forms.TextBox();
-            this.jonAmountBox = new System.Windows.Forms.TextBox();
-            this.jonFeeAmountBox = new System.Windows.Forms.TextBox();
-            this.aprAprComboBox = new System.Windows.Forms.ComboBox();
-            this.jonAprComboBox = new System.Windows.Forms.ComboBox();
-            this.jonFeeAprComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -209,6 +213,48 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Transaction Terms";
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(149, 175);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(106, 23);
+            this.textBox5.TabIndex = 29;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(149, 146);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(106, 23);
+            this.textBox4.TabIndex = 28;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(149, 117);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(106, 23);
+            this.textBox3.TabIndex = 27;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(149, 88);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(106, 23);
+            this.textBox2.TabIndex = 26;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(149, 30);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 25;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(149, 59);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(106, 23);
+            this.textBox1.TabIndex = 24;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.textBox7);
@@ -225,6 +271,34 @@
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Specified Terms";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(195, 130);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(106, 23);
+            this.textBox7.TabIndex = 30;
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(195, 101);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker3.TabIndex = 31;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(195, 72);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker2.TabIndex = 30;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(195, 43);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(106, 23);
+            this.textBox6.TabIndex = 30;
             // 
             // groupBox3
             // 
@@ -254,6 +328,60 @@
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Fees";
+            // 
+            // jonFeeAprComboBox
+            // 
+            this.jonFeeAprComboBox.FormattingEnabled = true;
+            this.jonFeeAprComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.jonFeeAprComboBox.Location = new System.Drawing.Point(753, 164);
+            this.jonFeeAprComboBox.Name = "jonFeeAprComboBox";
+            this.jonFeeAprComboBox.Size = new System.Drawing.Size(121, 23);
+            this.jonFeeAprComboBox.TabIndex = 23;
+            // 
+            // jonAprComboBox
+            // 
+            this.jonAprComboBox.FormattingEnabled = true;
+            this.jonAprComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.jonAprComboBox.Location = new System.Drawing.Point(753, 122);
+            this.jonAprComboBox.Name = "jonAprComboBox";
+            this.jonAprComboBox.Size = new System.Drawing.Size(121, 23);
+            this.jonAprComboBox.TabIndex = 22;
+            // 
+            // aprAprComboBox
+            // 
+            this.aprAprComboBox.FormattingEnabled = true;
+            this.aprAprComboBox.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.aprAprComboBox.Location = new System.Drawing.Point(753, 81);
+            this.aprAprComboBox.Name = "aprAprComboBox";
+            this.aprAprComboBox.Size = new System.Drawing.Size(121, 23);
+            this.aprAprComboBox.TabIndex = 21;
+            // 
+            // jonFeeAmountBox
+            // 
+            this.jonFeeAmountBox.Location = new System.Drawing.Point(604, 164);
+            this.jonFeeAmountBox.Name = "jonFeeAmountBox";
+            this.jonFeeAmountBox.Size = new System.Drawing.Size(100, 23);
+            this.jonFeeAmountBox.TabIndex = 20;
+            // 
+            // jonAmountBox
+            // 
+            this.jonAmountBox.Location = new System.Drawing.Point(604, 122);
+            this.jonAmountBox.Name = "jonAmountBox";
+            this.jonAmountBox.Size = new System.Drawing.Size(100, 23);
+            this.jonAmountBox.TabIndex = 19;
+            // 
+            // aprAmountBox
+            // 
+            this.aprAmountBox.Location = new System.Drawing.Point(604, 80);
+            this.aprAmountBox.Name = "aprAmountBox";
+            this.aprAmountBox.Size = new System.Drawing.Size(100, 23);
+            this.aprAmountBox.TabIndex = 18;
             // 
             // jonFeePayableComboBox
             // 
@@ -408,135 +536,41 @@
             this.label9.TabIndex = 1;
             this.label9.Text = "APR Effecting Origin";
             // 
-            // aprAmountBox
+            // dataGridView1
             // 
-            this.aprAmountBox.Location = new System.Drawing.Point(604, 80);
-            this.aprAmountBox.Name = "aprAmountBox";
-            this.aprAmountBox.Size = new System.Drawing.Size(100, 23);
-            this.aprAmountBox.TabIndex = 18;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(42, 601);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(885, 150);
+            this.dataGridView1.TabIndex = 15;
             // 
-            // jonAmountBox
+            // button2
             // 
-            this.jonAmountBox.Location = new System.Drawing.Point(604, 122);
-            this.jonAmountBox.Name = "jonAmountBox";
-            this.jonAmountBox.Size = new System.Drawing.Size(100, 23);
-            this.jonAmountBox.TabIndex = 19;
+            this.button2.Location = new System.Drawing.Point(818, 525);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(109, 39);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // jonFeeAmountBox
+            // button3
             // 
-            this.jonFeeAmountBox.Location = new System.Drawing.Point(604, 164);
-            this.jonFeeAmountBox.Name = "jonFeeAmountBox";
-            this.jonFeeAmountBox.Size = new System.Drawing.Size(100, 23);
-            this.jonFeeAmountBox.TabIndex = 20;
-            // 
-            // aprAprComboBox
-            // 
-            this.aprAprComboBox.FormattingEnabled = true;
-            this.aprAprComboBox.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.aprAprComboBox.Location = new System.Drawing.Point(753, 81);
-            this.aprAprComboBox.Name = "aprAprComboBox";
-            this.aprAprComboBox.Size = new System.Drawing.Size(121, 23);
-            this.aprAprComboBox.TabIndex = 21;
-            // 
-            // jonAprComboBox
-            // 
-            this.jonAprComboBox.FormattingEnabled = true;
-            this.jonAprComboBox.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.jonAprComboBox.Location = new System.Drawing.Point(753, 122);
-            this.jonAprComboBox.Name = "jonAprComboBox";
-            this.jonAprComboBox.Size = new System.Drawing.Size(121, 23);
-            this.jonAprComboBox.TabIndex = 22;
-            // 
-            // jonFeeAprComboBox
-            // 
-            this.jonFeeAprComboBox.FormattingEnabled = true;
-            this.jonFeeAprComboBox.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
-            this.jonFeeAprComboBox.Location = new System.Drawing.Point(753, 164);
-            this.jonFeeAprComboBox.Name = "jonFeeAprComboBox";
-            this.jonFeeAprComboBox.Size = new System.Drawing.Size(121, 23);
-            this.jonFeeAprComboBox.TabIndex = 23;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(149, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(106, 23);
-            this.textBox1.TabIndex = 24;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(149, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 25;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(149, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(106, 23);
-            this.textBox2.TabIndex = 26;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(149, 117);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(106, 23);
-            this.textBox3.TabIndex = 27;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(149, 146);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(106, 23);
-            this.textBox4.TabIndex = 28;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(149, 175);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(106, 23);
-            this.textBox5.TabIndex = 29;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(195, 43);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(106, 23);
-            this.textBox6.TabIndex = 30;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(195, 72);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker2.TabIndex = 30;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(195, 101);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker3.TabIndex = 31;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(195, 130);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(106, 23);
-            this.textBox7.TabIndex = 30;
+            this.button3.Location = new System.Drawing.Point(703, 525);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(109, 39);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Calculate";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 917);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -550,6 +584,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -601,5 +636,8 @@
         private TextBox jonFeeAmountBox;
         private TextBox jonAmountBox;
         private TextBox aprAmountBox;
+        private DataGridView dataGridView1;
+        private Button button2;
+        private Button button3;
     }
 }
