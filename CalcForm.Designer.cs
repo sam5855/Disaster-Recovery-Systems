@@ -43,7 +43,6 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -75,6 +74,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -194,10 +194,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label4);
@@ -233,13 +233,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(106, 23);
             this.textBox3.TabIndex = 27;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(149, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(106, 23);
-            this.textBox2.TabIndex = 26;
             // 
             // dateTimePicker1
             // 
@@ -563,6 +556,19 @@
             this.button3.Text = "Calculate";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Term Loan (P&I)",
+            "Balloon ",
+            "Interest Only",
+            "Principle Plus"});
+            this.comboBox1.Location = new System.Drawing.Point(149, 88);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(106, 23);
+            this.comboBox1.TabIndex = 24;
+            // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -623,7 +629,6 @@
         private TextBox textBox5;
         private TextBox textBox4;
         private TextBox textBox3;
-        private TextBox textBox2;
         private DateTimePicker dateTimePicker1;
         private TextBox textBox1;
         private TextBox textBox7;
@@ -639,5 +644,6 @@
         private DataGridView dataGridView1;
         private Button button2;
         private Button button3;
+        private ComboBox comboBox1;
     }
 }
