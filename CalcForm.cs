@@ -122,8 +122,9 @@ namespace Disaster_Recovery_Solution
         //Exports AllLoans list to CSV file
         private void exportCSVButton_Click(object sender, EventArgs e)
         {
-            //var csvPath = Path.Combine(Environment.CurrentDirectory, "test.csv");
-            using (var writer = new StreamWriter("C:\\Users\\Sam\\Downloads\\test.csv"))
+            //var csvPath = Path.Combine("C:\\Users\\Sam\\Downloads\\", $"Loans-{DateTime.Today.ToFileTime}.csv");
+            //using (var writer = new StreamWriter(csvPath))
+            using (var writer = new StreamWriter($"C:\\Users\\Sam\\Downloads\\loans.csv"))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
                 csv.WriteRecords(Inventory.AllLoans);
