@@ -24,9 +24,24 @@ namespace Disaster_Recovery_Solution
         }
 
         //Remove Loan from binding list
-        public static void RemoveLoan(int loanID)
+        public static bool RemoveLoan(int loanID)
         {
+            bool success = false;
 
+            foreach (Loan currentLoan in AllLoans)
+            {
+                if (loanID == currentLoan.loanID)
+                {
+                    AllLoans.Remove(currentLoan);
+                    return success = true;
+                }
+                else
+                {
+                    MessageBox.Show("ERROR: Could not delete Loan");
+                    return success = false;
+                }
+            }
+            return success;
         }
 
     }

@@ -27,5 +27,10 @@ namespace Disaster_Recovery_Solution
             new CalcForm().ShowDialog();
 
         }
+
+        private void exitAppButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

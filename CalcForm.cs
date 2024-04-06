@@ -16,7 +16,22 @@ namespace Disaster_Recovery_Solution
         {
             InitializeComponent();
 
+            //Links data source to DataGridView
             loanDetailsDGV.DataSource = Inventory.AllLoans;
+
+            //Removes blank row
+            loanDetailsDGV.AllowUserToAddRows = false;
+
+            //Enables full DGV row select
+            loanDetailsDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            //Makes DGV read only
+            loanDetailsDGV.ReadOnly = true;
+
+            //Makes only one DGV row selectable at a time
+            loanDetailsDGV.MultiSelect = false;
+
+            
         }
 
 
@@ -36,6 +51,7 @@ namespace Disaster_Recovery_Solution
 
         }
 
+        //Calculates and creates new Loan
         private void calculateLoanButton_Click(object sender, EventArgs e)
         {
             int loanID;
@@ -76,6 +92,31 @@ namespace Disaster_Recovery_Solution
 
 
 
+        }
+
+        //Closes calc engine window
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+
+        //Deletes selected loan
+        private void deleteLoanButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this loan? This cannot be undone", "Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                //Gets selected part
+                Loan deleteLoan = (Loan)loanDetailsDGV.CurrentRow.DataBoundItem;
+
+                //Iterates through selected rows 
+                foreach (DataGridViewRow row in loanDetailsDGV.SelectedRows)
+                {
+                    loanDetailsDGV.Rows.Remove(row);
+                    return;
+                }
+            }
         }
     }
 }

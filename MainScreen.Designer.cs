@@ -30,9 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.calcEngineButton = new System.Windows.Forms.Button();
+            this.entityCreatorButton = new System.Windows.Forms.Button();
+            this.formBuilderButton = new System.Windows.Forms.Button();
+            this.exitAppButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -55,40 +56,51 @@
             this.label2.Text = "Welcome to Disaster Recovery Solutions...";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // button1
+            // calcEngineButton
             // 
-            this.button1.Location = new System.Drawing.Point(109, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 47);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Calc Engine";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.calcEngineButton.Location = new System.Drawing.Point(109, 155);
+            this.calcEngineButton.Name = "calcEngineButton";
+            this.calcEngineButton.Size = new System.Drawing.Size(125, 47);
+            this.calcEngineButton.TabIndex = 1;
+            this.calcEngineButton.Text = "Calc Engine";
+            this.calcEngineButton.UseVisualStyleBackColor = true;
+            this.calcEngineButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // entityCreatorButton
             // 
-            this.button2.Location = new System.Drawing.Point(287, 155);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 47);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Entity Creator";
-            this.button2.UseVisualStyleBackColor = true;
+            this.entityCreatorButton.Location = new System.Drawing.Point(287, 155);
+            this.entityCreatorButton.Name = "entityCreatorButton";
+            this.entityCreatorButton.Size = new System.Drawing.Size(125, 47);
+            this.entityCreatorButton.TabIndex = 2;
+            this.entityCreatorButton.Text = "Entity Creator";
+            this.entityCreatorButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // formBuilderButton
             // 
-            this.button3.Location = new System.Drawing.Point(468, 155);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 47);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Form Builder";
-            this.button3.UseVisualStyleBackColor = true;
+            this.formBuilderButton.Location = new System.Drawing.Point(468, 155);
+            this.formBuilderButton.Name = "formBuilderButton";
+            this.formBuilderButton.Size = new System.Drawing.Size(125, 47);
+            this.formBuilderButton.TabIndex = 3;
+            this.formBuilderButton.Text = "Form Builder";
+            this.formBuilderButton.UseVisualStyleBackColor = true;
+            // 
+            // exitAppButton
+            // 
+            this.exitAppButton.Location = new System.Drawing.Point(587, 262);
+            this.exitAppButton.Name = "exitAppButton";
+            this.exitAppButton.Size = new System.Drawing.Size(90, 39);
+            this.exitAppButton.TabIndex = 4;
+            this.exitAppButton.Text = "Exit";
+            this.exitAppButton.UseVisualStyleBackColor = true;
+            this.exitAppButton.Click += new System.EventHandler(this.exitAppButton_Click);
             // 
             // MainScreen
             // 
             this.ClientSize = new System.Drawing.Size(689, 313);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.exitAppButton);
+            this.Controls.Add(this.formBuilderButton);
+            this.Controls.Add(this.entityCreatorButton);
+            this.Controls.Add(this.calcEngineButton);
             this.Controls.Add(this.label2);
             this.Name = "MainScreen";
             this.Text = "Disaster Recovery Solutions";
@@ -101,8 +113,9 @@
 
         private Label label1;
         private Label label2;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button calcEngineButton;
+        private Button entityCreatorButton;
+        private Button formBuilderButton;
+        private Button exitAppButton;
     }
 }

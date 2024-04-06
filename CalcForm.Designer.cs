@@ -587,6 +587,7 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // calculateLoanButton
             // 
@@ -624,6 +625,7 @@
             this.deleteLoanButton.TabIndex = 21;
             this.deleteLoanButton.Text = "Delete";
             this.deleteLoanButton.UseVisualStyleBackColor = true;
+            this.deleteLoanButton.Click += new System.EventHandler(this.deleteLoanButton_Click);
             // 
             // CalcForm
             // 
