@@ -40,29 +40,30 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.repaymentMethodComboBox = new System.Windows.Forms.ComboBox();
+            this.amountBorrowedTextBox = new System.Windows.Forms.TextBox();
+            this.amortizedTermTextBox = new System.Windows.Forms.TextBox();
+            this.loanTermTextBox = new System.Windows.Forms.TextBox();
+            this.loanDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.initialRateTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.paymentFreqComboBox = new System.Windows.Forms.ComboBox();
+            this.paymentAmountOverrideTextBox = new System.Windows.Forms.TextBox();
+            this.maturityDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.firstPaymentDatePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.jonFeeAprComboBox = new System.Windows.Forms.ComboBox();
             this.jonAprComboBox = new System.Windows.Forms.ComboBox();
             this.aprAprComboBox = new System.Windows.Forms.ComboBox();
-            this.jonFeeAmountBox = new System.Windows.Forms.TextBox();
-            this.jonAmountBox = new System.Windows.Forms.TextBox();
-            this.aprAmountBox = new System.Windows.Forms.TextBox();
+            this.jonFeeAmountTextBox = new System.Windows.Forms.TextBox();
+            this.jonAmountTextBox = new System.Windows.Forms.TextBox();
+            this.aprAmountTextBox = new System.Windows.Forms.TextBox();
             this.jonFeePayableComboBox = new System.Windows.Forms.ComboBox();
             this.jonPayableComboBox = new System.Windows.Forms.ComboBox();
             this.aprPayableComboBox = new System.Windows.Forms.ComboBox();
             this.jonFeeCollectionComboBox = new System.Windows.Forms.ComboBox();
             this.jonCollectionComboBox = new System.Windows.Forms.ComboBox();
-            this.aprCollectionComboBox = new System.Windows.Forms.ComboBox();
+            this.aprEffectingCollectionComboBox = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -71,14 +72,16 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.loanDetailsDGV = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.calculateLoanButton = new System.Windows.Forms.Button();
+            this.importCSVButton = new System.Windows.Forms.Button();
+            this.exportCSVButton = new System.Windows.Forms.Button();
+            this.deleteLoanButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loanDetailsDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -194,12 +197,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.repaymentMethodComboBox);
+            this.groupBox1.Controls.Add(this.amountBorrowedTextBox);
+            this.groupBox1.Controls.Add(this.amortizedTermTextBox);
+            this.groupBox1.Controls.Add(this.loanTermTextBox);
+            this.groupBox1.Controls.Add(this.loanDatePicker);
+            this.groupBox1.Controls.Add(this.initialRateTextBox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
@@ -213,47 +216,62 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Transaction Terms";
             // 
-            // textBox5
+            // repaymentMethodComboBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(149, 175);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(106, 23);
-            this.textBox5.TabIndex = 29;
+            this.repaymentMethodComboBox.FormattingEnabled = true;
+            this.repaymentMethodComboBox.Items.AddRange(new object[] {
+            "",
+            "Term Loan (P&I)",
+            "Balloon ",
+            "Interest Only",
+            "Principle Plus"});
+            this.repaymentMethodComboBox.Location = new System.Drawing.Point(149, 88);
+            this.repaymentMethodComboBox.Name = "repaymentMethodComboBox";
+            this.repaymentMethodComboBox.Size = new System.Drawing.Size(106, 23);
+            this.repaymentMethodComboBox.TabIndex = 24;
             // 
-            // textBox4
+            // amountBorrowedTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(149, 146);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(106, 23);
-            this.textBox4.TabIndex = 28;
+            this.amountBorrowedTextBox.Location = new System.Drawing.Point(149, 175);
+            this.amountBorrowedTextBox.Name = "amountBorrowedTextBox";
+            this.amountBorrowedTextBox.Size = new System.Drawing.Size(106, 23);
+            this.amountBorrowedTextBox.TabIndex = 29;
             // 
-            // textBox3
+            // amortizedTermTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(149, 117);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(106, 23);
-            this.textBox3.TabIndex = 27;
+            this.amortizedTermTextBox.Location = new System.Drawing.Point(149, 146);
+            this.amortizedTermTextBox.Name = "amortizedTermTextBox";
+            this.amortizedTermTextBox.Size = new System.Drawing.Size(106, 23);
+            this.amortizedTermTextBox.TabIndex = 28;
             // 
-            // dateTimePicker1
+            // loanTermTextBox
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(149, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 25;
+            this.loanTermTextBox.Location = new System.Drawing.Point(149, 117);
+            this.loanTermTextBox.Name = "loanTermTextBox";
+            this.loanTermTextBox.Size = new System.Drawing.Size(106, 23);
+            this.loanTermTextBox.TabIndex = 27;
             // 
-            // textBox1
+            // loanDatePicker
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(106, 23);
-            this.textBox1.TabIndex = 24;
+            this.loanDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.loanDatePicker.Location = new System.Drawing.Point(149, 30);
+            this.loanDatePicker.Name = "loanDatePicker";
+            this.loanDatePicker.Size = new System.Drawing.Size(106, 23);
+            this.loanDatePicker.TabIndex = 25;
+            // 
+            // initialRateTextBox
+            // 
+            this.initialRateTextBox.Location = new System.Drawing.Point(149, 59);
+            this.initialRateTextBox.Name = "initialRateTextBox";
+            this.initialRateTextBox.Size = new System.Drawing.Size(106, 23);
+            this.initialRateTextBox.TabIndex = 24;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.dateTimePicker3);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.paymentFreqComboBox);
+            this.groupBox2.Controls.Add(this.paymentAmountOverrideTextBox);
+            this.groupBox2.Controls.Add(this.maturityDatePicker);
+            this.groupBox2.Controls.Add(this.firstPaymentDatePicker);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label13);
@@ -265,48 +283,65 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Specified Terms";
             // 
-            // textBox7
+            // paymentFreqComboBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(195, 130);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(106, 23);
-            this.textBox7.TabIndex = 30;
+            this.paymentFreqComboBox.FormattingEnabled = true;
+            this.paymentFreqComboBox.Items.AddRange(new object[] {
+            "",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.paymentFreqComboBox.Location = new System.Drawing.Point(195, 43);
+            this.paymentFreqComboBox.Name = "paymentFreqComboBox";
+            this.paymentFreqComboBox.Size = new System.Drawing.Size(106, 23);
+            this.paymentFreqComboBox.TabIndex = 30;
             // 
-            // dateTimePicker3
+            // paymentAmountOverrideTextBox
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(195, 101);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker3.TabIndex = 31;
+            this.paymentAmountOverrideTextBox.Location = new System.Drawing.Point(195, 130);
+            this.paymentAmountOverrideTextBox.Name = "paymentAmountOverrideTextBox";
+            this.paymentAmountOverrideTextBox.Size = new System.Drawing.Size(106, 23);
+            this.paymentAmountOverrideTextBox.TabIndex = 30;
             // 
-            // dateTimePicker2
+            // maturityDatePicker
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(195, 72);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker2.TabIndex = 30;
+            this.maturityDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.maturityDatePicker.Location = new System.Drawing.Point(195, 101);
+            this.maturityDatePicker.Name = "maturityDatePicker";
+            this.maturityDatePicker.Size = new System.Drawing.Size(106, 23);
+            this.maturityDatePicker.TabIndex = 31;
             // 
-            // textBox6
+            // firstPaymentDatePicker
             // 
-            this.textBox6.Location = new System.Drawing.Point(195, 43);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(106, 23);
-            this.textBox6.TabIndex = 30;
+            this.firstPaymentDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.firstPaymentDatePicker.Location = new System.Drawing.Point(195, 72);
+            this.firstPaymentDatePicker.Name = "firstPaymentDatePicker";
+            this.firstPaymentDatePicker.Size = new System.Drawing.Size(106, 23);
+            this.firstPaymentDatePicker.TabIndex = 30;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.jonFeeAprComboBox);
             this.groupBox3.Controls.Add(this.jonAprComboBox);
             this.groupBox3.Controls.Add(this.aprAprComboBox);
-            this.groupBox3.Controls.Add(this.jonFeeAmountBox);
-            this.groupBox3.Controls.Add(this.jonAmountBox);
-            this.groupBox3.Controls.Add(this.aprAmountBox);
+            this.groupBox3.Controls.Add(this.jonFeeAmountTextBox);
+            this.groupBox3.Controls.Add(this.jonAmountTextBox);
+            this.groupBox3.Controls.Add(this.aprAmountTextBox);
             this.groupBox3.Controls.Add(this.jonFeePayableComboBox);
             this.groupBox3.Controls.Add(this.jonPayableComboBox);
             this.groupBox3.Controls.Add(this.aprPayableComboBox);
             this.groupBox3.Controls.Add(this.jonFeeCollectionComboBox);
             this.groupBox3.Controls.Add(this.jonCollectionComboBox);
-            this.groupBox3.Controls.Add(this.aprCollectionComboBox);
+            this.groupBox3.Controls.Add(this.aprEffectingCollectionComboBox);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label17);
@@ -326,6 +361,7 @@
             // 
             this.jonFeeAprComboBox.FormattingEnabled = true;
             this.jonFeeAprComboBox.Items.AddRange(new object[] {
+            "",
             "Yes",
             "No"});
             this.jonFeeAprComboBox.Location = new System.Drawing.Point(753, 164);
@@ -337,6 +373,7 @@
             // 
             this.jonAprComboBox.FormattingEnabled = true;
             this.jonAprComboBox.Items.AddRange(new object[] {
+            "",
             "Yes",
             "No"});
             this.jonAprComboBox.Location = new System.Drawing.Point(753, 122);
@@ -348,6 +385,7 @@
             // 
             this.aprAprComboBox.FormattingEnabled = true;
             this.aprAprComboBox.Items.AddRange(new object[] {
+            "",
             "Yes",
             "No"});
             this.aprAprComboBox.Location = new System.Drawing.Point(753, 81);
@@ -355,31 +393,32 @@
             this.aprAprComboBox.Size = new System.Drawing.Size(121, 23);
             this.aprAprComboBox.TabIndex = 21;
             // 
-            // jonFeeAmountBox
+            // jonFeeAmountTextBox
             // 
-            this.jonFeeAmountBox.Location = new System.Drawing.Point(604, 164);
-            this.jonFeeAmountBox.Name = "jonFeeAmountBox";
-            this.jonFeeAmountBox.Size = new System.Drawing.Size(100, 23);
-            this.jonFeeAmountBox.TabIndex = 20;
+            this.jonFeeAmountTextBox.Location = new System.Drawing.Point(604, 164);
+            this.jonFeeAmountTextBox.Name = "jonFeeAmountTextBox";
+            this.jonFeeAmountTextBox.Size = new System.Drawing.Size(100, 23);
+            this.jonFeeAmountTextBox.TabIndex = 20;
             // 
-            // jonAmountBox
+            // jonAmountTextBox
             // 
-            this.jonAmountBox.Location = new System.Drawing.Point(604, 122);
-            this.jonAmountBox.Name = "jonAmountBox";
-            this.jonAmountBox.Size = new System.Drawing.Size(100, 23);
-            this.jonAmountBox.TabIndex = 19;
+            this.jonAmountTextBox.Location = new System.Drawing.Point(604, 122);
+            this.jonAmountTextBox.Name = "jonAmountTextBox";
+            this.jonAmountTextBox.Size = new System.Drawing.Size(100, 23);
+            this.jonAmountTextBox.TabIndex = 19;
             // 
-            // aprAmountBox
+            // aprAmountTextBox
             // 
-            this.aprAmountBox.Location = new System.Drawing.Point(604, 80);
-            this.aprAmountBox.Name = "aprAmountBox";
-            this.aprAmountBox.Size = new System.Drawing.Size(100, 23);
-            this.aprAmountBox.TabIndex = 18;
+            this.aprAmountTextBox.Location = new System.Drawing.Point(604, 80);
+            this.aprAmountTextBox.Name = "aprAmountTextBox";
+            this.aprAmountTextBox.Size = new System.Drawing.Size(100, 23);
+            this.aprAmountTextBox.TabIndex = 18;
             // 
             // jonFeePayableComboBox
             // 
             this.jonFeePayableComboBox.FormattingEnabled = true;
             this.jonFeePayableComboBox.Items.AddRange(new object[] {
+            "",
             "Borrower ",
             "Lender"});
             this.jonFeePayableComboBox.Location = new System.Drawing.Point(402, 164);
@@ -391,6 +430,7 @@
             // 
             this.jonPayableComboBox.FormattingEnabled = true;
             this.jonPayableComboBox.Items.AddRange(new object[] {
+            "",
             "Borrower ",
             "Lender"});
             this.jonPayableComboBox.Location = new System.Drawing.Point(402, 122);
@@ -402,6 +442,7 @@
             // 
             this.aprPayableComboBox.FormattingEnabled = true;
             this.aprPayableComboBox.Items.AddRange(new object[] {
+            "",
             "Borrower ",
             "Lender"});
             this.aprPayableComboBox.Location = new System.Drawing.Point(402, 81);
@@ -413,10 +454,10 @@
             // 
             this.jonFeeCollectionComboBox.FormattingEnabled = true;
             this.jonFeeCollectionComboBox.Items.AddRange(new object[] {
+            "",
             "Cash ",
             "Added to Amount Financed",
-            "Subtracted from Amount Financed",
-            "-Empty-"});
+            "Subtracted from Amount Financed"});
             this.jonFeeCollectionComboBox.Location = new System.Drawing.Point(195, 165);
             this.jonFeeCollectionComboBox.Name = "jonFeeCollectionComboBox";
             this.jonFeeCollectionComboBox.Size = new System.Drawing.Size(121, 23);
@@ -426,27 +467,27 @@
             // 
             this.jonCollectionComboBox.FormattingEnabled = true;
             this.jonCollectionComboBox.Items.AddRange(new object[] {
+            "",
             "Cash ",
             "Added to Amount Financed",
-            "Subtracted from Amount Financed",
-            "-Empty-"});
+            "Subtracted from Amount Financed"});
             this.jonCollectionComboBox.Location = new System.Drawing.Point(195, 122);
             this.jonCollectionComboBox.Name = "jonCollectionComboBox";
             this.jonCollectionComboBox.Size = new System.Drawing.Size(121, 23);
             this.jonCollectionComboBox.TabIndex = 13;
             // 
-            // aprCollectionComboBox
+            // aprEffectingCollectionComboBox
             // 
-            this.aprCollectionComboBox.FormattingEnabled = true;
-            this.aprCollectionComboBox.Items.AddRange(new object[] {
+            this.aprEffectingCollectionComboBox.FormattingEnabled = true;
+            this.aprEffectingCollectionComboBox.Items.AddRange(new object[] {
+            "",
             "Cash ",
             "Added to Amount Financed",
-            "Subtracted from Amount Financed",
-            "-Empty-"});
-            this.aprCollectionComboBox.Location = new System.Drawing.Point(194, 81);
-            this.aprCollectionComboBox.Name = "aprCollectionComboBox";
-            this.aprCollectionComboBox.Size = new System.Drawing.Size(121, 23);
-            this.aprCollectionComboBox.TabIndex = 12;
+            "Subtracted from Amount Financed"});
+            this.aprEffectingCollectionComboBox.Location = new System.Drawing.Point(194, 81);
+            this.aprEffectingCollectionComboBox.Name = "aprEffectingCollectionComboBox";
+            this.aprEffectingCollectionComboBox.Size = new System.Drawing.Size(121, 23);
+            this.aprEffectingCollectionComboBox.TabIndex = 12;
             // 
             // label19
             // 
@@ -529,54 +570,72 @@
             this.label9.TabIndex = 1;
             this.label9.Text = "APR Effecting Origin";
             // 
-            // dataGridView1
+            // loanDetailsDGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 601);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(885, 150);
-            this.dataGridView1.TabIndex = 15;
+            this.loanDetailsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.loanDetailsDGV.Location = new System.Drawing.Point(42, 601);
+            this.loanDetailsDGV.Name = "loanDetailsDGV";
+            this.loanDetailsDGV.RowTemplate.Height = 25;
+            this.loanDetailsDGV.Size = new System.Drawing.Size(885, 150);
+            this.loanDetailsDGV.TabIndex = 15;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(818, 525);
+            this.button2.Location = new System.Drawing.Point(862, 866);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 39);
             this.button2.TabIndex = 17;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // calculateLoanButton
             // 
-            this.button3.Location = new System.Drawing.Point(703, 525);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 39);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Calculate";
-            this.button3.UseVisualStyleBackColor = true;
+            this.calculateLoanButton.Location = new System.Drawing.Point(42, 525);
+            this.calculateLoanButton.Name = "calculateLoanButton";
+            this.calculateLoanButton.Size = new System.Drawing.Size(109, 39);
+            this.calculateLoanButton.TabIndex = 18;
+            this.calculateLoanButton.Text = "Calculate";
+            this.calculateLoanButton.UseVisualStyleBackColor = true;
+            this.calculateLoanButton.Click += new System.EventHandler(this.calculateLoanButton_Click);
             // 
-            // comboBox1
+            // importCSVButton
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Term Loan (P&I)",
-            "Balloon ",
-            "Interest Only",
-            "Principle Plus"});
-            this.comboBox1.Location = new System.Drawing.Point(149, 88);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(106, 23);
-            this.comboBox1.TabIndex = 24;
+            this.importCSVButton.Location = new System.Drawing.Point(703, 757);
+            this.importCSVButton.Name = "importCSVButton";
+            this.importCSVButton.Size = new System.Drawing.Size(109, 39);
+            this.importCSVButton.TabIndex = 19;
+            this.importCSVButton.Text = "Import CSV";
+            this.importCSVButton.UseVisualStyleBackColor = true;
+            // 
+            // exportCSVButton
+            // 
+            this.exportCSVButton.Location = new System.Drawing.Point(818, 757);
+            this.exportCSVButton.Name = "exportCSVButton";
+            this.exportCSVButton.Size = new System.Drawing.Size(109, 39);
+            this.exportCSVButton.TabIndex = 20;
+            this.exportCSVButton.Text = "Export CSV";
+            this.exportCSVButton.UseVisualStyleBackColor = true;
+            // 
+            // deleteLoanButton
+            // 
+            this.deleteLoanButton.Location = new System.Drawing.Point(42, 757);
+            this.deleteLoanButton.Name = "deleteLoanButton";
+            this.deleteLoanButton.Size = new System.Drawing.Size(109, 39);
+            this.deleteLoanButton.TabIndex = 21;
+            this.deleteLoanButton.Text = "Delete";
+            this.deleteLoanButton.UseVisualStyleBackColor = true;
             // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 917);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.deleteLoanButton);
+            this.Controls.Add(this.exportCSVButton);
+            this.Controls.Add(this.importCSVButton);
+            this.Controls.Add(this.calculateLoanButton);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.loanDetailsDGV);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -590,7 +649,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loanDetailsDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -622,28 +681,31 @@
         private Label label19;
         private ComboBox jonFeeCollectionComboBox;
         private ComboBox jonCollectionComboBox;
-        private ComboBox aprCollectionComboBox;
+        private ComboBox aprEffectingCollectionComboBox;
         private ComboBox jonFeePayableComboBox;
         private ComboBox jonPayableComboBox;
         private ComboBox aprPayableComboBox;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox1;
-        private TextBox textBox7;
-        private DateTimePicker dateTimePicker3;
-        private DateTimePicker dateTimePicker2;
-        private TextBox textBox6;
+        private TextBox amountBorrowedTextBox;
+        private TextBox amortizedTermTextBox;
+        private TextBox loanTermTextBox;
+        private DateTimePicker loanDatePicker;
+        private TextBox initialRateTextBox;
+        private TextBox paymentAmountOverrideTextBox;
+        private DateTimePicker maturityDatePicker;
+        private DateTimePicker firstPaymentDatePicker;
         private ComboBox jonFeeAprComboBox;
         private ComboBox jonAprComboBox;
         private ComboBox aprAprComboBox;
-        private TextBox jonFeeAmountBox;
-        private TextBox jonAmountBox;
-        private TextBox aprAmountBox;
-        private DataGridView dataGridView1;
+        private TextBox jonFeeAmountTextBox;
+        private TextBox jonAmountTextBox;
+        private TextBox aprAmountTextBox;
+        private DataGridView loanDetailsDGV;
         private Button button2;
-        private Button button3;
-        private ComboBox comboBox1;
+        private Button calculateLoanButton;
+        private ComboBox repaymentMethodComboBox;
+        private Button importCSVButton;
+        private Button exportCSVButton;
+        private ComboBox paymentFreqComboBox;
+        private Button deleteLoanButton;
     }
 }
