@@ -616,6 +616,7 @@
             this.exportCSVButton.TabIndex = 20;
             this.exportCSVButton.Text = "Export CSV";
             this.exportCSVButton.UseVisualStyleBackColor = true;
+            this.exportCSVButton.Click += new System.EventHandler(this.exportCSVButton_Click);
             // 
             // deleteLoanButton
             // 

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CsvHelper;
+using System.IO;
+using System.Globalization;
 
 namespace Disaster_Recovery_Solution
 {
@@ -30,6 +33,9 @@ namespace Disaster_Recovery_Solution
 
             //Makes only one DGV row selectable at a time
             loanDetailsDGV.MultiSelect = false;
+
+
+
 
             
         }
@@ -86,12 +92,6 @@ namespace Disaster_Recovery_Solution
             Inventory.AddLoan(newLoan);
 
 
-
-
-
-
-
-
         }
 
         //Closes calc engine window
@@ -117,6 +117,20 @@ namespace Disaster_Recovery_Solution
                     return;
                 }
             }
+        }
+
+        //Exports AllLoans list to CSV file
+        private void exportCSVButton_Click(object sender, EventArgs e)
+        {
+            //var csvPath = Path.Combine(Environment.CurrentDirectory, "test.csv");
+            using (var writer = new StreamWriter("C:\\Users\\Sam\\Downloads\\test.csv"))
+            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            {
+                csv.WriteRecords(Inventory.AllLoans);
+            }
+             
+
+
         }
     }
 }

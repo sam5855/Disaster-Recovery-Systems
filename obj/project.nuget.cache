@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "P+9W3b5d5/W7NF5j0/vxYT+PEg9f6em0iRdaoO4e9Gv/YHlX9FlE9DpVAtpl81AzobTSvPCMKZQT1OcoN8OkXA==",
+  "dgSpecHash": "yFxn/fjqdXp5JzClE8uVxn8PId0kDGr5QzNkApjn2THDmFBNZwSRfgUYLKrrGxX6Hne8Ma1Icb2L36x/YJIjqQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sam\\Code\\Jon\\Disaster Recovery Solution\\Disaster Recovery Solution.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Sam\\.nuget\\packages\\csvhelper\\31.0.3\\csvhelper.31.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

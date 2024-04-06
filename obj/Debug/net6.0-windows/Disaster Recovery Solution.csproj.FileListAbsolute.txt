@@ -16,3 +16,5 @@ C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\refint
 C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster Recovery Solution.pdb
 C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster Recovery Solution.genruntimeconfig.cache
 C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\ref\Disaster Recovery Solution.dll
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\bin\Debug\net6.0-windows\CsvHelper.dll
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster Recovery Solution.csproj.CopyComplete
