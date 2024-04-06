@@ -45,19 +45,7 @@ namespace Disaster_Recovery_Solution
             return success;
         }
 
-        //Get values in list
-        public static List<Loan> GetLoans()
-        {
-            List<Loan> loanList = new List<Loan>();
-            foreach (Loan loan in AllLoans)
-            {
-                loanList.Add(loan);
-            }
-
-            return loanList;
-
-            
-        }
+        
 
 
     }
