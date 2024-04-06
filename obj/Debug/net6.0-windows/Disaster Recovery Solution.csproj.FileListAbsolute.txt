@@ -1,0 +1,18 @@
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\bin\Debug\net6.0-windows\Disaster Recovery Solution.exe
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\bin\Debug\net6.0-windows\Disaster Recovery Solution.deps.json
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\bin\Debug\net6.0-windows\Disaster Recovery Solution.runtimeconfig.json
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\bin\Debug\net6.0-windows\Disaster Recovery Solution.dll
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\bin\Debug\net6.0-windows\Disaster Recovery Solution.pdb
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster Recovery Solution.csproj.AssemblyReference.cache
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster_Recovery_Solution.CalcForm.resources
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster_Recovery_Solution.MainScreen.resources
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster Recovery Solution.csproj.GenerateResource.cache
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster Recovery Solution.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster Recovery Solution.AssemblyInfoInputs.cache
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster Recovery Solution.AssemblyInfo.cs
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster Recovery Solution.csproj.CoreCompileInputs.cache
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster Recovery Solution.dll
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\refint\Disaster Recovery Solution.dll
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster Recovery Solution.pdb
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster Recovery Solution.genruntimeconfig.cache
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\ref\Disaster Recovery Solution.dll
