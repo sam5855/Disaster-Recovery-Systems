@@ -220,7 +220,6 @@
             // 
             this.repaymentMethodComboBox.FormattingEnabled = true;
             this.repaymentMethodComboBox.Items.AddRange(new object[] {
-            "",
             "Term Loan (P&I)",
             "Balloon",
             "Interest Only",
@@ -287,7 +286,6 @@
             // 
             this.paymentFreqComboBox.FormattingEnabled = true;
             this.paymentFreqComboBox.Items.AddRange(new object[] {
-            "",
             "1",
             "2",
             "3",
@@ -361,7 +359,6 @@
             // 
             this.jonFeeAprComboBox.FormattingEnabled = true;
             this.jonFeeAprComboBox.Items.AddRange(new object[] {
-            "",
             "Yes",
             "No"});
             this.jonFeeAprComboBox.Location = new System.Drawing.Point(753, 164);
@@ -373,7 +370,6 @@
             // 
             this.jonAprComboBox.FormattingEnabled = true;
             this.jonAprComboBox.Items.AddRange(new object[] {
-            "",
             "Yes",
             "No"});
             this.jonAprComboBox.Location = new System.Drawing.Point(753, 122);
@@ -385,7 +381,6 @@
             // 
             this.aprAprComboBox.FormattingEnabled = true;
             this.aprAprComboBox.Items.AddRange(new object[] {
-            "",
             "Yes",
             "No"});
             this.aprAprComboBox.Location = new System.Drawing.Point(753, 81);
@@ -418,8 +413,7 @@
             // 
             this.jonFeePayableComboBox.FormattingEnabled = true;
             this.jonFeePayableComboBox.Items.AddRange(new object[] {
-            "",
-            "Borrower ",
+            "Borrower",
             "Lender"});
             this.jonFeePayableComboBox.Location = new System.Drawing.Point(402, 164);
             this.jonFeePayableComboBox.Name = "jonFeePayableComboBox";
@@ -430,8 +424,7 @@
             // 
             this.jonPayableComboBox.FormattingEnabled = true;
             this.jonPayableComboBox.Items.AddRange(new object[] {
-            "",
-            "Borrower ",
+            "Borrower",
             "Lender"});
             this.jonPayableComboBox.Location = new System.Drawing.Point(402, 122);
             this.jonPayableComboBox.Name = "jonPayableComboBox";
@@ -442,8 +435,7 @@
             // 
             this.aprPayableComboBox.FormattingEnabled = true;
             this.aprPayableComboBox.Items.AddRange(new object[] {
-            "",
-            "Borrower ",
+            "Borrower",
             "Lender"});
             this.aprPayableComboBox.Location = new System.Drawing.Point(402, 81);
             this.aprPayableComboBox.Name = "aprPayableComboBox";
@@ -454,8 +446,7 @@
             // 
             this.jonFeeCollectionComboBox.FormattingEnabled = true;
             this.jonFeeCollectionComboBox.Items.AddRange(new object[] {
-            "",
-            "Cash ",
+            "Cash",
             "Added to Amount Financed",
             "Subtracted from Amount Financed"});
             this.jonFeeCollectionComboBox.Location = new System.Drawing.Point(195, 165);
@@ -467,8 +458,7 @@
             // 
             this.jonCollectionComboBox.FormattingEnabled = true;
             this.jonCollectionComboBox.Items.AddRange(new object[] {
-            "",
-            "Cash ",
+            "Cash",
             "Added to Amount Financed",
             "Subtracted from Amount Financed"});
             this.jonCollectionComboBox.Location = new System.Drawing.Point(195, 122);
@@ -480,8 +470,7 @@
             // 
             this.aprEffectingCollectionComboBox.FormattingEnabled = true;
             this.aprEffectingCollectionComboBox.Items.AddRange(new object[] {
-            "",
-            "Cash ",
+            "Cash",
             "Added to Amount Financed",
             "Subtracted from Amount Financed"});
             this.aprEffectingCollectionComboBox.Location = new System.Drawing.Point(194, 81);
