@@ -44,6 +44,10 @@ namespace Disaster_Recovery_Solution
             FirstPaymentDate = firstPaymentDate;
             MaturityDate = maturityDate;
             PaymentAmountOverride = paymentAmountOverride;
+
+            //Methods to calculate loan attributes 
+            TotalFinancedWithFees = setTotalFinanced(repaymentMethod);
+
         }
 
 
@@ -52,11 +56,15 @@ namespace Disaster_Recovery_Solution
         //Class methods for calculations
         public static decimal setTotalFinanced(string repaymentMethod)
         {
-            
             if (repaymentMethod == "Balloon")
             {
-                TotalFinancedWithFees = this.amountBorrowed + 
+                return 6.69m;
             }
+            else
+            {
+                return 2.32m;
+            }
+         
         }
     }
 }

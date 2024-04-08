@@ -31,7 +31,7 @@ namespace Disaster_Recovery_Solution
 
             foreach (Loan currentLoan in AllLoans)
             {
-                if (loanID == currentLoan.loanID)
+                if (loanID == currentLoan.LoanID)
                 {
                     AllLoans.Remove(currentLoan);
                     return success = true;

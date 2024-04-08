@@ -222,7 +222,7 @@
             this.repaymentMethodComboBox.Items.AddRange(new object[] {
             "",
             "Term Loan (P&I)",
-            "Balloon ",
+            "Balloon",
             "Interest Only",
             "Principle Plus"});
             this.repaymentMethodComboBox.Location = new System.Drawing.Point(149, 88);

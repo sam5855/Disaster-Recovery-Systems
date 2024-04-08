@@ -91,7 +91,7 @@ namespace Disaster_Recovery_Solution
             Loan newLoan = new Loan(loanID, loanDate, initialRate, repaymentMethod, loanTerm, amortizedTerm, amountBorrowed, paymentFrequency, firstPaymentDate, maturityDate, paymentAmountOverride);
             Inventory.AddLoan(newLoan);
 
-            newLoan.totalFinancedWithFees = Calc.setTotalFinanced(repaymentMethod);
+            //Loan.setTotalFinanced(repaymentMethod);
 
 
         }
