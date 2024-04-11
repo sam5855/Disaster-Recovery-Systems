@@ -52,16 +52,16 @@
             this.maturityDatePicker = new System.Windows.Forms.DateTimePicker();
             this.firstPaymentDatePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.jonFeeAprComboBox = new System.Windows.Forms.ComboBox();
+            this.jon2AprComboBox = new System.Windows.Forms.ComboBox();
             this.jonAprComboBox = new System.Windows.Forms.ComboBox();
             this.aprAprComboBox = new System.Windows.Forms.ComboBox();
-            this.jonFeeAmountTextBox = new System.Windows.Forms.TextBox();
+            this.jon2AmountTextBox = new System.Windows.Forms.TextBox();
             this.jonAmountTextBox = new System.Windows.Forms.TextBox();
             this.aprAmountTextBox = new System.Windows.Forms.TextBox();
-            this.jonFeePayableComboBox = new System.Windows.Forms.ComboBox();
+            this.jon2PayableComboBox = new System.Windows.Forms.ComboBox();
             this.jonPayableComboBox = new System.Windows.Forms.ComboBox();
             this.aprPayableComboBox = new System.Windows.Forms.ComboBox();
-            this.jonFeeCollectionComboBox = new System.Windows.Forms.ComboBox();
+            this.jon2CollectionComboBox = new System.Windows.Forms.ComboBox();
             this.jonCollectionComboBox = new System.Windows.Forms.ComboBox();
             this.aprEffectingCollectionComboBox = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -328,16 +328,16 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.jonFeeAprComboBox);
+            this.groupBox3.Controls.Add(this.jon2AprComboBox);
             this.groupBox3.Controls.Add(this.jonAprComboBox);
             this.groupBox3.Controls.Add(this.aprAprComboBox);
-            this.groupBox3.Controls.Add(this.jonFeeAmountTextBox);
+            this.groupBox3.Controls.Add(this.jon2AmountTextBox);
             this.groupBox3.Controls.Add(this.jonAmountTextBox);
             this.groupBox3.Controls.Add(this.aprAmountTextBox);
-            this.groupBox3.Controls.Add(this.jonFeePayableComboBox);
+            this.groupBox3.Controls.Add(this.jon2PayableComboBox);
             this.groupBox3.Controls.Add(this.jonPayableComboBox);
             this.groupBox3.Controls.Add(this.aprPayableComboBox);
-            this.groupBox3.Controls.Add(this.jonFeeCollectionComboBox);
+            this.groupBox3.Controls.Add(this.jon2CollectionComboBox);
             this.groupBox3.Controls.Add(this.jonCollectionComboBox);
             this.groupBox3.Controls.Add(this.aprEffectingCollectionComboBox);
             this.groupBox3.Controls.Add(this.label19);
@@ -355,16 +355,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Fees";
             // 
-            // jonFeeAprComboBox
+            // jon2AprComboBox
             // 
-            this.jonFeeAprComboBox.FormattingEnabled = true;
-            this.jonFeeAprComboBox.Items.AddRange(new object[] {
+            this.jon2AprComboBox.FormattingEnabled = true;
+            this.jon2AprComboBox.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.jonFeeAprComboBox.Location = new System.Drawing.Point(753, 164);
-            this.jonFeeAprComboBox.Name = "jonFeeAprComboBox";
-            this.jonFeeAprComboBox.Size = new System.Drawing.Size(121, 23);
-            this.jonFeeAprComboBox.TabIndex = 23;
+            this.jon2AprComboBox.Location = new System.Drawing.Point(753, 164);
+            this.jon2AprComboBox.Name = "jon2AprComboBox";
+            this.jon2AprComboBox.Size = new System.Drawing.Size(121, 23);
+            this.jon2AprComboBox.TabIndex = 23;
             // 
             // jonAprComboBox
             // 
@@ -388,12 +388,12 @@
             this.aprAprComboBox.Size = new System.Drawing.Size(121, 23);
             this.aprAprComboBox.TabIndex = 21;
             // 
-            // jonFeeAmountTextBox
+            // jon2AmountTextBox
             // 
-            this.jonFeeAmountTextBox.Location = new System.Drawing.Point(604, 164);
-            this.jonFeeAmountTextBox.Name = "jonFeeAmountTextBox";
-            this.jonFeeAmountTextBox.Size = new System.Drawing.Size(100, 23);
-            this.jonFeeAmountTextBox.TabIndex = 20;
+            this.jon2AmountTextBox.Location = new System.Drawing.Point(604, 164);
+            this.jon2AmountTextBox.Name = "jon2AmountTextBox";
+            this.jon2AmountTextBox.Size = new System.Drawing.Size(100, 23);
+            this.jon2AmountTextBox.TabIndex = 20;
             // 
             // jonAmountTextBox
             // 
@@ -409,16 +409,16 @@
             this.aprAmountTextBox.Size = new System.Drawing.Size(100, 23);
             this.aprAmountTextBox.TabIndex = 18;
             // 
-            // jonFeePayableComboBox
+            // jon2PayableComboBox
             // 
-            this.jonFeePayableComboBox.FormattingEnabled = true;
-            this.jonFeePayableComboBox.Items.AddRange(new object[] {
+            this.jon2PayableComboBox.FormattingEnabled = true;
+            this.jon2PayableComboBox.Items.AddRange(new object[] {
             "Borrower",
             "Lender"});
-            this.jonFeePayableComboBox.Location = new System.Drawing.Point(402, 164);
-            this.jonFeePayableComboBox.Name = "jonFeePayableComboBox";
-            this.jonFeePayableComboBox.Size = new System.Drawing.Size(121, 23);
-            this.jonFeePayableComboBox.TabIndex = 17;
+            this.jon2PayableComboBox.Location = new System.Drawing.Point(402, 164);
+            this.jon2PayableComboBox.Name = "jon2PayableComboBox";
+            this.jon2PayableComboBox.Size = new System.Drawing.Size(121, 23);
+            this.jon2PayableComboBox.TabIndex = 17;
             // 
             // jonPayableComboBox
             // 
@@ -442,17 +442,17 @@
             this.aprPayableComboBox.Size = new System.Drawing.Size(121, 23);
             this.aprPayableComboBox.TabIndex = 15;
             // 
-            // jonFeeCollectionComboBox
+            // jon2CollectionComboBox
             // 
-            this.jonFeeCollectionComboBox.FormattingEnabled = true;
-            this.jonFeeCollectionComboBox.Items.AddRange(new object[] {
+            this.jon2CollectionComboBox.FormattingEnabled = true;
+            this.jon2CollectionComboBox.Items.AddRange(new object[] {
             "Cash",
             "Added to Amount Financed",
             "Subtracted from Amount Financed"});
-            this.jonFeeCollectionComboBox.Location = new System.Drawing.Point(195, 165);
-            this.jonFeeCollectionComboBox.Name = "jonFeeCollectionComboBox";
-            this.jonFeeCollectionComboBox.Size = new System.Drawing.Size(121, 23);
-            this.jonFeeCollectionComboBox.TabIndex = 14;
+            this.jon2CollectionComboBox.Location = new System.Drawing.Point(195, 165);
+            this.jon2CollectionComboBox.Name = "jon2CollectionComboBox";
+            this.jon2CollectionComboBox.Size = new System.Drawing.Size(121, 23);
+            this.jon2CollectionComboBox.TabIndex = 14;
             // 
             // jonCollectionComboBox
             // 
@@ -671,10 +671,10 @@
         private Label label8;
         private Label label9;
         private Label label19;
-        private ComboBox jonFeeCollectionComboBox;
+        private ComboBox jon2CollectionComboBox;
         private ComboBox jonCollectionComboBox;
         private ComboBox aprEffectingCollectionComboBox;
-        private ComboBox jonFeePayableComboBox;
+        private ComboBox jon2PayableComboBox;
         private ComboBox jonPayableComboBox;
         private ComboBox aprPayableComboBox;
         private TextBox amountBorrowedTextBox;
@@ -685,10 +685,10 @@
         private TextBox paymentAmountOverrideTextBox;
         private DateTimePicker maturityDatePicker;
         private DateTimePicker firstPaymentDatePicker;
-        private ComboBox jonFeeAprComboBox;
+        private ComboBox jon2AprComboBox;
         private ComboBox jonAprComboBox;
         private ComboBox aprAprComboBox;
-        private TextBox jonFeeAmountTextBox;
+        private TextBox jon2AmountTextBox;
         private TextBox jonAmountTextBox;
         private TextBox aprAmountTextBox;
         private DataGridView loanDetailsDGV;

@@ -22,9 +22,6 @@ namespace Disaster_Recovery_Solution
         public string FirstPaymentDate { get; set; }
         public string MaturityDate { get; set; }
         public decimal PaymentAmountOverride { get; set; }
-
-
-
         public string AprCollectionMethod { get; set; }
         public string JonCollectionMethod { get; set; }
         public string Jon2CollectionMethod { get; set; }
@@ -43,6 +40,18 @@ namespace Disaster_Recovery_Solution
 
         
         //Calculated attributes
+        public decimal AprAmountEffectingApr { get; set; }
+        public decimal JonAmountEffectingApr { get; set; }  
+        public decimal Jon2AmountEffectingApr { get; set; }
+        public decimal AprEffectingLoanAmount { get; set; }
+        public decimal JonEffectingLoanAmount { get; set; }
+        public decimal Jon2EffectingLoanAmount { get; set; }
+        public decimal AprRemovedFromProceeds { get; set; }
+        public decimal JonRemovedFromProceeds { get; set; }
+        public decimal Jon2RemovedFromProceeds { get; set; }
+
+
+        //Calculated attributes returned at top of spreadsheet
         public decimal TotalFinancedWithFees { get; set; }
         
 
@@ -83,7 +92,7 @@ namespace Disaster_Recovery_Solution
 
 
             //Methods to calculate loan attributes 
-            TotalFinancedWithFees = setTotalFinanced(repaymentMethod);
+            TotalFinancedWithFees = setTotalFinanced(repaymentMethod, amountBorrowed);
 
         }
 
@@ -92,9 +101,9 @@ namespace Disaster_Recovery_Solution
 
         //Class methods for calculations
         //Logic below works, constructor calls method to set variable. Need to build out correct logic for this. 
-        public static decimal setTotalFinanced(string repaymentMethod)
+        public static decimal setTotalFinanced(string repaymentMethod, decimal amountBorrowed)
         {
-            if (repaymentMethod == "Balloon")
+            if (repaymentMethod == "Term Loan (P&I)")
             {
                 return 6.69m;
             }

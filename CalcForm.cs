@@ -72,6 +72,21 @@ namespace Disaster_Recovery_Solution
             string maturityDate;
             decimal paymentAmountOverride;
 
+            string aprCollectionMethod;
+            string jonCollectionMethod;
+            string jon2CollectionMethod;
+            string aprPayableBy;
+            string jonPayableBy;
+            string jon2PayableBy;
+            decimal aprAmount;
+            decimal jonAmount;
+            decimal jon2Amount;
+            string aprEffecting;
+            string jonEffecting;
+            string jon2Effecting;
+
+                
+
             //Include error handling later
 
             //----------------------------
@@ -88,7 +103,27 @@ namespace Disaster_Recovery_Solution
             maturityDate = maturityDatePicker.Text;
             paymentAmountOverride = decimal.Parse(paymentAmountOverrideTextBox.Text);
 
-            Loan newLoan = new Loan(loanID, loanDate, initialRate, repaymentMethod, loanTerm, amortizedTerm, amountBorrowed, paymentFrequency, firstPaymentDate, maturityDate, paymentAmountOverride);
+            aprCollectionMethod = aprEffectingCollectionComboBox.Text;
+            jonCollectionMethod = jonCollectionComboBox.Text;
+            jon2CollectionMethod = jon2CollectionComboBox.Text;
+            aprPayableBy = aprPayableComboBox.Text;
+            jonPayableBy = jonPayableComboBox.Text;
+            jon2PayableBy = jon2PayableComboBox.Text;
+            aprAmount = decimal.Parse(aprAmountTextBox.Text);
+            jonAmount = decimal.Parse(jonAmountTextBox.Text);
+            jon2Amount = decimal.Parse(jon2AmountTextBox.Text);
+            aprEffecting = aprAprComboBox.Text;
+            jonEffecting = jonAprComboBox.Text;
+            jon2Effecting = jon2AprComboBox.Text;
+
+
+
+
+            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            //Need to add additional parameters in Loan.CS constructor to this construcor call to resolve error below
+            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            Loan newLoan = new Loan(loanID, loanDate, initialRate, repaymentMethod, loanTerm, amortizedTerm, amountBorrowed, paymentFrequency, firstPaymentDate, maturityDate, paymentAmountOverride, aprCollectionMethod, jonCollectionMethod, jon2CollectionMethod, aprPayableBy,
+            jonPayableBy, jon2PayableBy, aprAmount, jonAmount, jon2Amount, aprEffecting, jonEffecting, jon2Effecting);
             Inventory.AddLoan(newLoan);
 
             //Loan.setTotalFinanced(repaymentMethod);
