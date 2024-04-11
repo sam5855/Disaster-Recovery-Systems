@@ -16,7 +16,7 @@ namespace Disaster_Recovery_Solution
         public int InitialRate { get; set; }
         public string RepaymentMethod { get; set; }
         public int LoanTerm { get; set; }
-        public int AmortizedTerm { get; set;}
+        public int AmortizedTerm { get; set; }
         public decimal AmountBorrowed { get; set; }
         public int PaymentFrequency { get; set; }
         public string FirstPaymentDate { get; set; }
@@ -36,14 +36,14 @@ namespace Disaster_Recovery_Solution
         public string Jon2Effecting { get; set; }
 
 
-        
 
-        
+
+
         //Calculated attributes
 
         //Amounts Effecting Apr 
         public decimal AprAmountEffectingApr { get; set; }
-        public decimal JonAmountEffectingApr { get; set; }  
+        public decimal JonAmountEffectingApr { get; set; }
         public decimal Jon2AmountEffectingApr { get; set; }
         public decimal AmountEffectingAprTotal { get; set; }
 
@@ -64,7 +64,7 @@ namespace Disaster_Recovery_Solution
 
         //Calculated attributes returned at top of spreadsheet
         public decimal TotalFinancedWithFees { get; set; }
-        
+
 
 
         //Blank Constructor
@@ -112,7 +112,7 @@ namespace Disaster_Recovery_Solution
             AmountEffectingAprTotal = setAmountEffectingAprTotal(AprAmountEffectingApr, JonAmountEffectingApr, Jon2AmountEffectingApr);
 
             //Method calls to set Amount Effecting Apr cells [J27 - J31]
-
+            //Testing pushing from pc
 
             //Method calls to set Amount Effecting Apr cells [K27 - K31]
 
@@ -134,10 +134,10 @@ namespace Disaster_Recovery_Solution
             {
                 return 2.32m;
             }
-         
+
         }
 
-       
+
         //Methods to calculate Amount Effecting Apr Fee cells[I27 - I31]
         public static decimal setAprAmountEffectingApr(string aprEffecting, decimal aprAmount)
         {
@@ -181,7 +181,7 @@ namespace Disaster_Recovery_Solution
 
 
 
-       
+
 
 
 
