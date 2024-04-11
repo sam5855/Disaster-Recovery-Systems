@@ -40,15 +40,26 @@ namespace Disaster_Recovery_Solution
 
         
         //Calculated attributes
+
+        //Amounts Effecting Apr 
         public decimal AprAmountEffectingApr { get; set; }
         public decimal JonAmountEffectingApr { get; set; }  
         public decimal Jon2AmountEffectingApr { get; set; }
+        public decimal AmountEffectingAprTotal { get; set; }
+
+        //Fee Collection Effecting Loan Amount
         public decimal AprEffectingLoanAmount { get; set; }
         public decimal JonEffectingLoanAmount { get; set; }
         public decimal Jon2EffectingLoanAmount { get; set; }
+        public decimal FeeCollectionEffectingLoanAmountTotal { get; set; }
+
+
+        //Apr Fees Removed from Proceeds
         public decimal AprRemovedFromProceeds { get; set; }
         public decimal JonRemovedFromProceeds { get; set; }
         public decimal Jon2RemovedFromProceeds { get; set; }
+        public decimal AprFeeRemovedFromProceedsTotal { get; set; }
+
 
 
         //Calculated attributes returned at top of spreadsheet
@@ -92,7 +103,14 @@ namespace Disaster_Recovery_Solution
 
 
             //Methods to calculate loan attributes 
-            TotalFinancedWithFees = setTotalFinanced(repaymentMethod, amountBorrowed);
+            //TotalFinancedWithFees = setTotalFinanced(repaymentMethod, amountBorrowed);
+
+
+            AprAmountEffectingApr = setAprAmountEffectingApr(AprEffecting, AprAmount);
+            JonAmountEffectingApr = setJonAmountEffectingApr(JonEffecting, JonAmount);
+            Jon2AmountEffectingApr = setJon2AmountEffectingApr(Jon2Effecting, Jon2Amount);
+            AmountEffectingAprTotal = setAmountEffectingAprTotal(AprAmountEffectingApr, JonAmountEffectingApr, Jon2AmountEffectingApr);
+
 
         }
 
@@ -113,5 +131,56 @@ namespace Disaster_Recovery_Solution
             }
          
         }
+
+       
+        //Amount Effecting Apr Fee [I27 - I30] Calculations
+        public static decimal setAprAmountEffectingApr(string aprEffecting, decimal aprAmount)
+        {
+            if (aprEffecting == "Yes")
+            {
+                return aprAmount;
+            }
+            else
+            {
+                return 0.00m;
+            }
+        }
+        public static decimal setJonAmountEffectingApr(string jonEffecting, decimal jonAmount)
+        {
+            if (jonEffecting == "Yes")
+            {
+                return jonAmount;
+            }
+            else
+            {
+                return 0.00m;
+            }
+        }
+        public static decimal setJon2AmountEffectingApr(string jon2Effecting, decimal jon2Amount)
+        {
+            if (jon2Effecting == "Yes")
+            {
+                return jon2Amount;
+            }
+            else
+            {
+                return 0.00m;
+            }
+        }
+        public static decimal setAmountEffectingAprTotal(decimal aprAmountEffectingApr, decimal jonAmountEffectingApr, decimal jon2AmountEffectingApr)
+        {
+            return aprAmountEffectingApr + jonAmountEffectingApr + jon2AmountEffectingApr;
+        }
+
+
+
+
+
+        //Fee total Calculations 
+
+
+
+
+
     }
 }

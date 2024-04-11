@@ -91,6 +91,7 @@ namespace Disaster_Recovery_Solution
 
             //----------------------------
 
+            //Transaction Inputs
             loanID = (Inventory.AllLoans.Count + 1);
             loanDate = loanDatePicker.Text;
             initialRate = int.Parse(initialRateTextBox.Text);
@@ -98,11 +99,16 @@ namespace Disaster_Recovery_Solution
             loanTerm = int.Parse(loanTermTextBox.Text);
             amortizedTerm = int.Parse(amortizedTermTextBox.Text);
             amountBorrowed = decimal.Parse(amountBorrowedTextBox.Text);
+            
+           
+            //Specified Term Inputs
             paymentFrequency = int.Parse(paymentFreqComboBox.Text);
             firstPaymentDate = firstPaymentDatePicker.Text;
             maturityDate = maturityDatePicker.Text;
             paymentAmountOverride = decimal.Parse(paymentAmountOverrideTextBox.Text);
 
+
+            //Fee Inputs
             aprCollectionMethod = aprEffectingCollectionComboBox.Text;
             jonCollectionMethod = jonCollectionComboBox.Text;
             jon2CollectionMethod = jon2CollectionComboBox.Text;
@@ -119,9 +125,7 @@ namespace Disaster_Recovery_Solution
 
 
 
-            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            //Need to add additional parameters in Loan.CS constructor to this construcor call to resolve error below
-            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    
             Loan newLoan = new Loan(loanID, loanDate, initialRate, repaymentMethod, loanTerm, amortizedTerm, amountBorrowed, paymentFrequency, firstPaymentDate, maturityDate, paymentAmountOverride, aprCollectionMethod, jonCollectionMethod, jon2CollectionMethod, aprPayableBy,
             jonPayableBy, jon2PayableBy, aprAmount, jonAmount, jon2Amount, aprEffecting, jonEffecting, jon2Effecting);
             Inventory.AddLoan(newLoan);
