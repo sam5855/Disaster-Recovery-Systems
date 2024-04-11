@@ -105,11 +105,16 @@ namespace Disaster_Recovery_Solution
             //Methods to calculate loan attributes 
             //TotalFinancedWithFees = setTotalFinanced(repaymentMethod, amountBorrowed);
 
-
+            //Method calls to set Amount Effecting Apr cells [I27 - I31]
             AprAmountEffectingApr = setAprAmountEffectingApr(AprEffecting, AprAmount);
             JonAmountEffectingApr = setJonAmountEffectingApr(JonEffecting, JonAmount);
             Jon2AmountEffectingApr = setJon2AmountEffectingApr(Jon2Effecting, Jon2Amount);
             AmountEffectingAprTotal = setAmountEffectingAprTotal(AprAmountEffectingApr, JonAmountEffectingApr, Jon2AmountEffectingApr);
+
+            //Method calls to set Amount Effecting Apr cells [J27 - J31]
+
+
+            //Method calls to set Amount Effecting Apr cells [K27 - K31]
 
 
         }
@@ -133,7 +138,7 @@ namespace Disaster_Recovery_Solution
         }
 
        
-        //Amount Effecting Apr Fee [I27 - I30] Calculations
+        //Methods to calculate Amount Effecting Apr Fee cells[I27 - I31]
         public static decimal setAprAmountEffectingApr(string aprEffecting, decimal aprAmount)
         {
             if (aprEffecting == "Yes")
@@ -176,7 +181,7 @@ namespace Disaster_Recovery_Solution
 
 
 
-        //Fee total Calculations 
+       
 
 
 
