@@ -121,7 +121,7 @@ namespace Disaster_Recovery_Solution
             //Method calls to set APR Fees Removed from Proceeds cells [K27 - K31]
             AprRemovedFromProceeds = setAprRemovedFromProceeds(AprEffecting, AprEffectingLoanAmount);
             JonRemovedFromProceeds = setJonRemovedFromProceeds(JonEffecting, JonEffectingLoanAmount);
-            Jon2RemovedFromProceeds = Jon2RemovedFromProceeds(Jon2Effecting, Jon2EffectingLoanAmount);
+            Jon2RemovedFromProceeds = setJon2RemovedFromProceeds(Jon2Effecting, Jon2EffectingLoanAmount);
             AprFeeRemovedFromProceedsTotal = setAprFeeRemovedFromProceedsTotal(AprRemovedFromProceeds, JonRemovedFromProceeds, Jon2RemovedFromProceeds);
 
 
@@ -215,7 +215,7 @@ namespace Disaster_Recovery_Solution
             {
                 return jonAmount;
             }
-            else if (aprCollectionMethod == "Subtracted from Amount Financed")
+            else if (jonCollectionMethod == "Subtracted from Amount Financed")
             {
                 return jonAmount * -1.00m;
             }
@@ -260,7 +260,7 @@ namespace Disaster_Recovery_Solution
         }
         public static decimal setJonRemovedFromProceeds(string jonEffecting, decimal jonEffectingLoanAmount)
         {
-            if (aprEffecting == "Yes")
+            if (jonEffecting == "Yes")
             {
                 return 0.00m;
             }
@@ -271,7 +271,7 @@ namespace Disaster_Recovery_Solution
         }
         public static decimal setJon2RemovedFromProceeds(string jon2Effecting, decimal jon2EffectingLoanAmount)
         {
-            if (aprEffecting == "Yes")
+            if (jon2Effecting == "Yes")
             {
                 return 0.00m;
             }
