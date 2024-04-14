@@ -99,6 +99,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.textBoxTotalFinancedWithFees = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.clearInputsButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -634,7 +635,7 @@
             this.calculateLoanButton.Name = "calculateLoanButton";
             this.calculateLoanButton.Size = new System.Drawing.Size(109, 39);
             this.calculateLoanButton.TabIndex = 18;
-            this.calculateLoanButton.Text = "Calculate";
+            this.calculateLoanButton.Text = "Calculate Loan";
             this.calculateLoanButton.UseVisualStyleBackColor = false;
             this.calculateLoanButton.Click += new System.EventHandler(this.calculateLoanButton_Click);
             // 
@@ -866,11 +867,23 @@
             this.label21.TabIndex = 33;
             this.label21.Text = "Total Proceeds Financed with Fee\'s";
             // 
+            // clearInputsButton
+            // 
+            this.clearInputsButton.BackColor = System.Drawing.Color.IndianRed;
+            this.clearInputsButton.Location = new System.Drawing.Point(157, 335);
+            this.clearInputsButton.Name = "clearInputsButton";
+            this.clearInputsButton.Size = new System.Drawing.Size(109, 39);
+            this.clearInputsButton.TabIndex = 23;
+            this.clearInputsButton.Text = "Clear Inputs";
+            this.clearInputsButton.UseVisualStyleBackColor = false;
+            this.clearInputsButton.Click += new System.EventHandler(this.clearInputsButton_Click);
+            // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1372, 877);
+            this.Controls.Add(this.clearInputsButton);
             this.Controls.Add(this.loanDetailsGroupBox);
             this.Controls.Add(this.deleteLoanButton);
             this.Controls.Add(this.exportCSVButton);
@@ -974,5 +987,6 @@
         private TextBox textBoxTotalPrincipalPaid;
         private TextBox textBoxTotalInterestPaid;
         private TextBox textBoxEstimatedPayment;
+        private Button clearInputsButton;
     }
 }

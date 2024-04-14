@@ -196,5 +196,18 @@ namespace Disaster_Recovery_Solution
                 return;
             }
         }
+
+
+        
+
+        //Clears Loan Inputs
+        private void clearInputsButton_Click(object sender, EventArgs e)
+        {
+            foreach (var grpBox in this.Controls.OfType<GroupBox>())
+            {
+                foreach (var TTX in grpBox.Controls.OfType<TextBox>())
+                    TTX.Text = string.Empty;
+            }
+        }
     }
 }
