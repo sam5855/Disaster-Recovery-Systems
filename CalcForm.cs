@@ -205,8 +205,10 @@ namespace Disaster_Recovery_Solution
         {
             foreach (var grpBox in this.Controls.OfType<GroupBox>())
             {
-                foreach (var TTX in grpBox.Controls.OfType<TextBox>())
-                    TTX.Text = string.Empty;
+                foreach (var textBox in grpBox.Controls.OfType<TextBox>())
+                    textBox.Text = string.Empty;
+                foreach (var comboBox in grpBox.Controls.OfType<ComboBox>())
+                    comboBox.Text = string.Empty;
             }
         }
     }
