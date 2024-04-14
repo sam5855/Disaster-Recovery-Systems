@@ -67,6 +67,7 @@ namespace Disaster_Recovery_Solution
             int loanTerm;
             int amortizedTerm;
             decimal amountBorrowed;
+            string accrualMethod;
             int paymentFrequency;
             string firstPaymentDate;
             string maturityDate;
@@ -99,6 +100,7 @@ namespace Disaster_Recovery_Solution
             loanTerm = int.Parse(loanTermTextBox.Text);
             amortizedTerm = int.Parse(amortizedTermTextBox.Text);
             amountBorrowed = decimal.Parse(amountBorrowedTextBox.Text);
+            accrualMethod = accrualMethodComboBox.Text;
             
            
             //Specified Term Inputs
@@ -126,7 +128,7 @@ namespace Disaster_Recovery_Solution
 
 
     
-            Loan newLoan = new Loan(loanID, loanDate, initialRate, repaymentMethod, loanTerm, amortizedTerm, amountBorrowed, paymentFrequency, firstPaymentDate, maturityDate, paymentAmountOverride, aprCollectionMethod, jonCollectionMethod, jon2CollectionMethod, aprPayableBy,
+            Loan newLoan = new Loan(loanID, loanDate, initialRate, repaymentMethod, loanTerm, amortizedTerm, amountBorrowed, accrualMethod, paymentFrequency, firstPaymentDate, maturityDate, paymentAmountOverride, aprCollectionMethod, jonCollectionMethod, jon2CollectionMethod, aprPayableBy,
             jonPayableBy, jon2PayableBy, aprAmount, jonAmount, jon2Amount, aprEffecting, jonEffecting, jon2Effecting);
             Inventory.AddLoan(newLoan);
 

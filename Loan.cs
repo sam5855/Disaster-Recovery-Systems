@@ -18,6 +18,7 @@ namespace Disaster_Recovery_Solution
         public int LoanTerm { get; set; }
         public int AmortizedTerm { get; set; }
         public decimal AmountBorrowed { get; set; }
+        public string AccrualMethod { get; set; }
         public int PaymentFrequency { get; set; }
         public string FirstPaymentDate { get; set; }
         public string MaturityDate { get; set; }
@@ -65,13 +66,22 @@ namespace Disaster_Recovery_Solution
         //Calculated attributes returned at top of spreadsheet
         public decimal TotalFinancedWithFees { get; set; }
 
+        //public decimal EstimatedPayment { get; set; }
+        //public decimal TotalInterestPaid { get; set; }
+        //public decimal TotalPrinciplePaid { get; set; }
+        //public decimal TotalAmountPaid { get; set; }
+        //public decimal AprNoFeesIncluded { get; set; }
+        //public decimal AprEffectingFee { get; set; }
+        //public decimal TotalFinanceCharge { get; set; }
+        //public decimal AprWithFees { get; set; }
+
 
 
         //Blank Constructor
         public Loan() { }
 
         //Constructor with parameters
-        public Loan(int loanID, string loanDate, int initialRate, string repaymentMethod, int loanTerm, int amortizedTerm, decimal amountBorrowed, int paymentFrequency, string firstPaymentDate, string maturityDate, decimal paymentAmountOverride, string aprCollectionMethod, string jonCollectionMethod, string jon2CollectionMethod, string aprPayableBy,
+        public Loan(int loanID, string loanDate, int initialRate, string repaymentMethod, int loanTerm, int amortizedTerm, decimal amountBorrowed, string accrualMethod, int paymentFrequency, string firstPaymentDate, string maturityDate, decimal paymentAmountOverride, string aprCollectionMethod, string jonCollectionMethod, string jon2CollectionMethod, string aprPayableBy,
             string jonPayableBy, string jon2PayableBy, decimal aprAmount, decimal jonAmount, decimal jon2Amount, string aprEffecting, string jonEffecting, string jon2Effecting)
         {
             LoanID = loanID;
@@ -81,6 +91,7 @@ namespace Disaster_Recovery_Solution
             LoanTerm = loanTerm;
             AmortizedTerm = amortizedTerm;
             AmountBorrowed = amountBorrowed;
+            AccrualMethod = accrualMethod;
             PaymentFrequency = paymentFrequency;
             FirstPaymentDate = firstPaymentDate;
             MaturityDate = maturityDate;

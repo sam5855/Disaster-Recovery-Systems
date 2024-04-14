@@ -78,6 +78,8 @@
             this.importCSVButton = new System.Windows.Forms.Button();
             this.exportCSVButton = new System.Windows.Forms.Button();
             this.deleteLoanButton = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.accrualMethodComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -197,6 +199,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.accrualMethodComboBox);
+            this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.repaymentMethodComboBox);
             this.groupBox1.Controls.Add(this.amountBorrowedTextBox);
             this.groupBox1.Controls.Add(this.amortizedTermTextBox);
@@ -211,7 +215,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Location = new System.Drawing.Point(42, 53);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(404, 211);
+            this.groupBox1.Size = new System.Drawing.Size(404, 276);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Transaction Terms";
@@ -277,7 +281,7 @@
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Location = new System.Drawing.Point(512, 53);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(415, 211);
+            this.groupBox2.Size = new System.Drawing.Size(415, 276);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Specified Terms";
@@ -348,7 +352,7 @@
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(42, 308);
+            this.groupBox3.Location = new System.Drawing.Point(42, 458);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(885, 211);
             this.groupBox3.TabIndex = 14;
@@ -562,7 +566,7 @@
             // loanDetailsDGV
             // 
             this.loanDetailsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.loanDetailsDGV.Location = new System.Drawing.Point(42, 601);
+            this.loanDetailsDGV.Location = new System.Drawing.Point(42, 791);
             this.loanDetailsDGV.Name = "loanDetailsDGV";
             this.loanDetailsDGV.RowTemplate.Height = 25;
             this.loanDetailsDGV.Size = new System.Drawing.Size(885, 150);
@@ -570,7 +574,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(862, 866);
+            this.button2.Location = new System.Drawing.Point(862, 1056);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 39);
             this.button2.TabIndex = 17;
@@ -580,7 +584,7 @@
             // 
             // calculateLoanButton
             // 
-            this.calculateLoanButton.Location = new System.Drawing.Point(42, 525);
+            this.calculateLoanButton.Location = new System.Drawing.Point(42, 675);
             this.calculateLoanButton.Name = "calculateLoanButton";
             this.calculateLoanButton.Size = new System.Drawing.Size(109, 39);
             this.calculateLoanButton.TabIndex = 18;
@@ -590,7 +594,7 @@
             // 
             // importCSVButton
             // 
-            this.importCSVButton.Location = new System.Drawing.Point(703, 757);
+            this.importCSVButton.Location = new System.Drawing.Point(703, 947);
             this.importCSVButton.Name = "importCSVButton";
             this.importCSVButton.Size = new System.Drawing.Size(109, 39);
             this.importCSVButton.TabIndex = 19;
@@ -599,7 +603,7 @@
             // 
             // exportCSVButton
             // 
-            this.exportCSVButton.Location = new System.Drawing.Point(818, 757);
+            this.exportCSVButton.Location = new System.Drawing.Point(818, 947);
             this.exportCSVButton.Name = "exportCSVButton";
             this.exportCSVButton.Size = new System.Drawing.Size(109, 39);
             this.exportCSVButton.TabIndex = 20;
@@ -609,7 +613,7 @@
             // 
             // deleteLoanButton
             // 
-            this.deleteLoanButton.Location = new System.Drawing.Point(42, 757);
+            this.deleteLoanButton.Location = new System.Drawing.Point(42, 947);
             this.deleteLoanButton.Name = "deleteLoanButton";
             this.deleteLoanButton.Size = new System.Drawing.Size(109, 39);
             this.deleteLoanButton.TabIndex = 21;
@@ -617,11 +621,34 @@
             this.deleteLoanButton.UseVisualStyleBackColor = true;
             this.deleteLoanButton.Click += new System.EventHandler(this.deleteLoanButton_Click);
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(29, 207);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(100, 17);
+            this.label20.TabIndex = 30;
+            this.label20.Text = "Accrual Method";
+            // 
+            // accrualMethodComboBox
+            // 
+            this.accrualMethodComboBox.FormattingEnabled = true;
+            this.accrualMethodComboBox.Items.AddRange(new object[] {
+            "Term Loan (P&I)",
+            "Balloon",
+            "Interest Only",
+            "Principle Plus"});
+            this.accrualMethodComboBox.Location = new System.Drawing.Point(149, 206);
+            this.accrualMethodComboBox.Name = "accrualMethodComboBox";
+            this.accrualMethodComboBox.Size = new System.Drawing.Size(106, 23);
+            this.accrualMethodComboBox.TabIndex = 31;
+            // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 917);
+            this.ClientSize = new System.Drawing.Size(983, 1107);
             this.Controls.Add(this.deleteLoanButton);
             this.Controls.Add(this.exportCSVButton);
             this.Controls.Add(this.importCSVButton);
@@ -699,5 +726,7 @@
         private Button exportCSVButton;
         private ComboBox paymentFreqComboBox;
         private Button deleteLoanButton;
+        private ComboBox accrualMethodComboBox;
+        private Label label20;
     }
 }
