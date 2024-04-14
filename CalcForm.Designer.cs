@@ -40,6 +40,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.accrualMethodComboBox = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.repaymentMethodComboBox = new System.Windows.Forms.ComboBox();
             this.amountBorrowedTextBox = new System.Windows.Forms.TextBox();
             this.amortizedTermTextBox = new System.Windows.Forms.TextBox();
@@ -78,8 +80,6 @@
             this.importCSVButton = new System.Windows.Forms.Button();
             this.exportCSVButton = new System.Windows.Forms.Button();
             this.deleteLoanButton = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.accrualMethodComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -215,10 +215,33 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Location = new System.Drawing.Point(42, 53);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(404, 276);
+            this.groupBox1.Size = new System.Drawing.Size(320, 276);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Transaction Terms";
+            // 
+            // accrualMethodComboBox
+            // 
+            this.accrualMethodComboBox.FormattingEnabled = true;
+            this.accrualMethodComboBox.Items.AddRange(new object[] {
+            "Term Loan (P&I)",
+            "Balloon",
+            "Interest Only",
+            "Principle Plus"});
+            this.accrualMethodComboBox.Location = new System.Drawing.Point(149, 206);
+            this.accrualMethodComboBox.Name = "accrualMethodComboBox";
+            this.accrualMethodComboBox.Size = new System.Drawing.Size(106, 23);
+            this.accrualMethodComboBox.TabIndex = 31;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(29, 207);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(100, 17);
+            this.label20.TabIndex = 30;
+            this.label20.Text = "Accrual Method";
             // 
             // repaymentMethodComboBox
             // 
@@ -279,9 +302,9 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Location = new System.Drawing.Point(512, 53);
+            this.groupBox2.Location = new System.Drawing.Point(368, 53);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(415, 276);
+            this.groupBox2.Size = new System.Drawing.Size(320, 276);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Specified Terms";
@@ -352,9 +375,9 @@
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(42, 458);
+            this.groupBox3.Location = new System.Drawing.Point(703, 53);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(885, 211);
+            this.groupBox3.Size = new System.Drawing.Size(649, 276);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Fees";
@@ -365,7 +388,7 @@
             this.jon2AprComboBox.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.jon2AprComboBox.Location = new System.Drawing.Point(753, 164);
+            this.jon2AprComboBox.Location = new System.Drawing.Point(506, 163);
             this.jon2AprComboBox.Name = "jon2AprComboBox";
             this.jon2AprComboBox.Size = new System.Drawing.Size(121, 23);
             this.jon2AprComboBox.TabIndex = 23;
@@ -376,7 +399,7 @@
             this.jonAprComboBox.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.jonAprComboBox.Location = new System.Drawing.Point(753, 122);
+            this.jonAprComboBox.Location = new System.Drawing.Point(506, 121);
             this.jonAprComboBox.Name = "jonAprComboBox";
             this.jonAprComboBox.Size = new System.Drawing.Size(121, 23);
             this.jonAprComboBox.TabIndex = 22;
@@ -387,28 +410,28 @@
             this.aprAprComboBox.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.aprAprComboBox.Location = new System.Drawing.Point(753, 81);
+            this.aprAprComboBox.Location = new System.Drawing.Point(506, 80);
             this.aprAprComboBox.Name = "aprAprComboBox";
             this.aprAprComboBox.Size = new System.Drawing.Size(121, 23);
             this.aprAprComboBox.TabIndex = 21;
             // 
             // jon2AmountTextBox
             // 
-            this.jon2AmountTextBox.Location = new System.Drawing.Point(604, 164);
+            this.jon2AmountTextBox.Location = new System.Drawing.Point(400, 164);
             this.jon2AmountTextBox.Name = "jon2AmountTextBox";
             this.jon2AmountTextBox.Size = new System.Drawing.Size(100, 23);
             this.jon2AmountTextBox.TabIndex = 20;
             // 
             // jonAmountTextBox
             // 
-            this.jonAmountTextBox.Location = new System.Drawing.Point(604, 122);
+            this.jonAmountTextBox.Location = new System.Drawing.Point(400, 122);
             this.jonAmountTextBox.Name = "jonAmountTextBox";
             this.jonAmountTextBox.Size = new System.Drawing.Size(100, 23);
             this.jonAmountTextBox.TabIndex = 19;
             // 
             // aprAmountTextBox
             // 
-            this.aprAmountTextBox.Location = new System.Drawing.Point(604, 80);
+            this.aprAmountTextBox.Location = new System.Drawing.Point(400, 80);
             this.aprAmountTextBox.Name = "aprAmountTextBox";
             this.aprAmountTextBox.Size = new System.Drawing.Size(100, 23);
             this.aprAmountTextBox.TabIndex = 18;
@@ -419,7 +442,7 @@
             this.jon2PayableComboBox.Items.AddRange(new object[] {
             "Borrower",
             "Lender"});
-            this.jon2PayableComboBox.Location = new System.Drawing.Point(402, 164);
+            this.jon2PayableComboBox.Location = new System.Drawing.Point(273, 163);
             this.jon2PayableComboBox.Name = "jon2PayableComboBox";
             this.jon2PayableComboBox.Size = new System.Drawing.Size(121, 23);
             this.jon2PayableComboBox.TabIndex = 17;
@@ -430,7 +453,7 @@
             this.jonPayableComboBox.Items.AddRange(new object[] {
             "Borrower",
             "Lender"});
-            this.jonPayableComboBox.Location = new System.Drawing.Point(402, 122);
+            this.jonPayableComboBox.Location = new System.Drawing.Point(273, 121);
             this.jonPayableComboBox.Name = "jonPayableComboBox";
             this.jonPayableComboBox.Size = new System.Drawing.Size(121, 23);
             this.jonPayableComboBox.TabIndex = 16;
@@ -441,7 +464,7 @@
             this.aprPayableComboBox.Items.AddRange(new object[] {
             "Borrower",
             "Lender"});
-            this.aprPayableComboBox.Location = new System.Drawing.Point(402, 81);
+            this.aprPayableComboBox.Location = new System.Drawing.Point(273, 80);
             this.aprPayableComboBox.Name = "aprPayableComboBox";
             this.aprPayableComboBox.Size = new System.Drawing.Size(121, 23);
             this.aprPayableComboBox.TabIndex = 15;
@@ -453,7 +476,7 @@
             "Cash",
             "Added to Amount Financed",
             "Subtracted from Amount Financed"});
-            this.jon2CollectionComboBox.Location = new System.Drawing.Point(195, 165);
+            this.jon2CollectionComboBox.Location = new System.Drawing.Point(147, 164);
             this.jon2CollectionComboBox.Name = "jon2CollectionComboBox";
             this.jon2CollectionComboBox.Size = new System.Drawing.Size(121, 23);
             this.jon2CollectionComboBox.TabIndex = 14;
@@ -465,7 +488,7 @@
             "Cash",
             "Added to Amount Financed",
             "Subtracted from Amount Financed"});
-            this.jonCollectionComboBox.Location = new System.Drawing.Point(195, 122);
+            this.jonCollectionComboBox.Location = new System.Drawing.Point(147, 121);
             this.jonCollectionComboBox.Name = "jonCollectionComboBox";
             this.jonCollectionComboBox.Size = new System.Drawing.Size(121, 23);
             this.jonCollectionComboBox.TabIndex = 13;
@@ -477,7 +500,7 @@
             "Cash",
             "Added to Amount Financed",
             "Subtracted from Amount Financed"});
-            this.aprEffectingCollectionComboBox.Location = new System.Drawing.Point(194, 81);
+            this.aprEffectingCollectionComboBox.Location = new System.Drawing.Point(146, 80);
             this.aprEffectingCollectionComboBox.Name = "aprEffectingCollectionComboBox";
             this.aprEffectingCollectionComboBox.Size = new System.Drawing.Size(121, 23);
             this.aprEffectingCollectionComboBox.TabIndex = 12;
@@ -486,7 +509,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(776, 44);
+            this.label19.Location = new System.Drawing.Point(529, 43);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(92, 17);
             this.label19.TabIndex = 8;
@@ -496,7 +519,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(626, 44);
+            this.label18.Location = new System.Drawing.Point(422, 44);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(58, 17);
             this.label18.TabIndex = 7;
@@ -507,7 +530,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(426, 44);
+            this.label17.Location = new System.Drawing.Point(297, 43);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(75, 17);
             this.label17.TabIndex = 6;
@@ -517,7 +540,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(194, 44);
+            this.label16.Location = new System.Drawing.Point(146, 43);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(122, 17);
             this.label16.TabIndex = 5;
@@ -566,10 +589,10 @@
             // loanDetailsDGV
             // 
             this.loanDetailsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.loanDetailsDGV.Location = new System.Drawing.Point(42, 791);
+            this.loanDetailsDGV.Location = new System.Drawing.Point(42, 458);
             this.loanDetailsDGV.Name = "loanDetailsDGV";
             this.loanDetailsDGV.RowTemplate.Height = 25;
-            this.loanDetailsDGV.Size = new System.Drawing.Size(885, 150);
+            this.loanDetailsDGV.Size = new System.Drawing.Size(627, 150);
             this.loanDetailsDGV.TabIndex = 15;
             // 
             // button2
@@ -584,17 +607,18 @@
             // 
             // calculateLoanButton
             // 
-            this.calculateLoanButton.Location = new System.Drawing.Point(42, 675);
+            this.calculateLoanButton.BackColor = System.Drawing.Color.ForestGreen;
+            this.calculateLoanButton.Location = new System.Drawing.Point(42, 335);
             this.calculateLoanButton.Name = "calculateLoanButton";
             this.calculateLoanButton.Size = new System.Drawing.Size(109, 39);
             this.calculateLoanButton.TabIndex = 18;
             this.calculateLoanButton.Text = "Calculate";
-            this.calculateLoanButton.UseVisualStyleBackColor = true;
+            this.calculateLoanButton.UseVisualStyleBackColor = false;
             this.calculateLoanButton.Click += new System.EventHandler(this.calculateLoanButton_Click);
             // 
             // importCSVButton
             // 
-            this.importCSVButton.Location = new System.Drawing.Point(703, 947);
+            this.importCSVButton.Location = new System.Drawing.Point(42, 614);
             this.importCSVButton.Name = "importCSVButton";
             this.importCSVButton.Size = new System.Drawing.Size(109, 39);
             this.importCSVButton.TabIndex = 19;
@@ -603,7 +627,7 @@
             // 
             // exportCSVButton
             // 
-            this.exportCSVButton.Location = new System.Drawing.Point(818, 947);
+            this.exportCSVButton.Location = new System.Drawing.Point(157, 614);
             this.exportCSVButton.Name = "exportCSVButton";
             this.exportCSVButton.Size = new System.Drawing.Size(109, 39);
             this.exportCSVButton.TabIndex = 20;
@@ -613,42 +637,20 @@
             // 
             // deleteLoanButton
             // 
-            this.deleteLoanButton.Location = new System.Drawing.Point(42, 947);
+            this.deleteLoanButton.BackColor = System.Drawing.Color.IndianRed;
+            this.deleteLoanButton.Location = new System.Drawing.Point(560, 614);
             this.deleteLoanButton.Name = "deleteLoanButton";
             this.deleteLoanButton.Size = new System.Drawing.Size(109, 39);
             this.deleteLoanButton.TabIndex = 21;
             this.deleteLoanButton.Text = "Delete";
-            this.deleteLoanButton.UseVisualStyleBackColor = true;
+            this.deleteLoanButton.UseVisualStyleBackColor = false;
             this.deleteLoanButton.Click += new System.EventHandler(this.deleteLoanButton_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(29, 207);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(100, 17);
-            this.label20.TabIndex = 30;
-            this.label20.Text = "Accrual Method";
-            // 
-            // accrualMethodComboBox
-            // 
-            this.accrualMethodComboBox.FormattingEnabled = true;
-            this.accrualMethodComboBox.Items.AddRange(new object[] {
-            "Term Loan (P&I)",
-            "Balloon",
-            "Interest Only",
-            "Principle Plus"});
-            this.accrualMethodComboBox.Location = new System.Drawing.Point(149, 206);
-            this.accrualMethodComboBox.Name = "accrualMethodComboBox";
-            this.accrualMethodComboBox.Size = new System.Drawing.Size(106, 23);
-            this.accrualMethodComboBox.TabIndex = 31;
             // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 1107);
+            this.ClientSize = new System.Drawing.Size(1372, 1107);
             this.Controls.Add(this.deleteLoanButton);
             this.Controls.Add(this.exportCSVButton);
             this.Controls.Add(this.importCSVButton);
