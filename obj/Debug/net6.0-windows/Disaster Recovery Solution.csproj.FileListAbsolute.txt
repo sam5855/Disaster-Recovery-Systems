@@ -18,3 +18,4 @@ C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disast
 C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\ref\Disaster Recovery Solution.dll
 C:\Users\Sam\Code\Jon\Disaster Recovery Solution\bin\Debug\net6.0-windows\CsvHelper.dll
 C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster Recovery Solution.csproj.CopyComplete
+C:\Users\Sam\Code\Jon\Disaster Recovery Solution\obj\Debug\net6.0-windows\Disaster_Recovery_Solution.Properties.Resources.resources

@@ -80,10 +80,14 @@
             this.importCSVButton = new System.Windows.Forms.Button();
             this.exportCSVButton = new System.Windows.Forms.Button();
             this.deleteLoanButton = new System.Windows.Forms.Button();
+            this.loanDetailsGroupBox = new System.Windows.Forms.GroupBox();
+            this.textBoxTotalFinancedWithFees = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loanDetailsDGV)).BeginInit();
+            this.loanDetailsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -589,20 +593,22 @@
             // loanDetailsDGV
             // 
             this.loanDetailsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.loanDetailsDGV.Location = new System.Drawing.Point(42, 458);
+            this.loanDetailsDGV.Location = new System.Drawing.Point(42, 465);
             this.loanDetailsDGV.Name = "loanDetailsDGV";
             this.loanDetailsDGV.RowTemplate.Height = 25;
             this.loanDetailsDGV.Size = new System.Drawing.Size(627, 150);
             this.loanDetailsDGV.TabIndex = 15;
+            this.loanDetailsDGV.SelectionChanged += new System.EventHandler(this.loanDetailsDGV_SelectionChanged);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(862, 1056);
+            this.button2.BackColor = System.Drawing.Color.DarkOrange;
+            this.button2.Location = new System.Drawing.Point(1251, 1056);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 39);
             this.button2.TabIndex = 17;
             this.button2.Text = "Exit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // calculateLoanButton
@@ -618,7 +624,7 @@
             // 
             // importCSVButton
             // 
-            this.importCSVButton.Location = new System.Drawing.Point(42, 614);
+            this.importCSVButton.Location = new System.Drawing.Point(42, 621);
             this.importCSVButton.Name = "importCSVButton";
             this.importCSVButton.Size = new System.Drawing.Size(109, 39);
             this.importCSVButton.TabIndex = 19;
@@ -627,7 +633,7 @@
             // 
             // exportCSVButton
             // 
-            this.exportCSVButton.Location = new System.Drawing.Point(157, 614);
+            this.exportCSVButton.Location = new System.Drawing.Point(157, 621);
             this.exportCSVButton.Name = "exportCSVButton";
             this.exportCSVButton.Size = new System.Drawing.Size(109, 39);
             this.exportCSVButton.TabIndex = 20;
@@ -638,7 +644,7 @@
             // deleteLoanButton
             // 
             this.deleteLoanButton.BackColor = System.Drawing.Color.IndianRed;
-            this.deleteLoanButton.Location = new System.Drawing.Point(560, 614);
+            this.deleteLoanButton.Location = new System.Drawing.Point(560, 621);
             this.deleteLoanButton.Name = "deleteLoanButton";
             this.deleteLoanButton.Size = new System.Drawing.Size(109, 39);
             this.deleteLoanButton.TabIndex = 21;
@@ -646,11 +652,42 @@
             this.deleteLoanButton.UseVisualStyleBackColor = false;
             this.deleteLoanButton.Click += new System.EventHandler(this.deleteLoanButton_Click);
             // 
+            // loanDetailsGroupBox
+            // 
+            this.loanDetailsGroupBox.Controls.Add(this.textBoxTotalFinancedWithFees);
+            this.loanDetailsGroupBox.Controls.Add(this.label21);
+            this.loanDetailsGroupBox.Location = new System.Drawing.Point(703, 447);
+            this.loanDetailsGroupBox.Name = "loanDetailsGroupBox";
+            this.loanDetailsGroupBox.Size = new System.Drawing.Size(649, 274);
+            this.loanDetailsGroupBox.TabIndex = 22;
+            this.loanDetailsGroupBox.TabStop = false;
+            this.loanDetailsGroupBox.Text = "Loan Details";
+            // 
+            // textBoxTotalFinancedWithFees
+            // 
+            this.textBoxTotalFinancedWithFees.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxTotalFinancedWithFees.Location = new System.Drawing.Point(224, 45);
+            this.textBoxTotalFinancedWithFees.Name = "textBoxTotalFinancedWithFees";
+            this.textBoxTotalFinancedWithFees.ReadOnly = true;
+            this.textBoxTotalFinancedWithFees.Size = new System.Drawing.Size(106, 23);
+            this.textBoxTotalFinancedWithFees.TabIndex = 32;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label21.Location = new System.Drawing.Point(6, 46);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(212, 17);
+            this.label21.TabIndex = 33;
+            this.label21.Text = "Total Proceeds Financed With Fee\'s";
+            // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1372, 1107);
+            this.Controls.Add(this.loanDetailsGroupBox);
             this.Controls.Add(this.deleteLoanButton);
             this.Controls.Add(this.exportCSVButton);
             this.Controls.Add(this.importCSVButton);
@@ -661,6 +698,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "CalcForm";
             this.Text = "Disaster Recovery Solutions";
             this.Load += new System.EventHandler(this.CalcForm_Load);
@@ -671,6 +709,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loanDetailsDGV)).EndInit();
+            this.loanDetailsGroupBox.ResumeLayout(false);
+            this.loanDetailsGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -730,5 +770,8 @@
         private Button deleteLoanButton;
         private ComboBox accrualMethodComboBox;
         private Label label20;
+        private GroupBox loanDetailsGroupBox;
+        private Label label21;
+        private TextBox textBoxTotalFinancedWithFees;
     }
 }

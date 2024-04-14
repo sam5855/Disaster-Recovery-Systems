@@ -144,6 +144,9 @@ namespace Disaster_Recovery_Solution
         }
 
 
+
+
+
         //Deletes selected loan
         private void deleteLoanButton_Click(object sender, EventArgs e)
         {
@@ -175,6 +178,23 @@ namespace Disaster_Recovery_Solution
              
 
 
+        }
+
+        private void labelTotalFinancedWithFees_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Displays loan details in Loan Details text boxes based on selected row
+        private void loanDetailsDGV_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in loanDetailsDGV.SelectedRows)
+            {
+                Loan displayLoan = (Loan)loanDetailsDGV.CurrentRow.DataBoundItem;
+                textBoxTotalFinancedWithFees.Text = displayLoan.TotalFinancedWithFees.ToString();
+
+                return;
+            }
         }
     }
 }

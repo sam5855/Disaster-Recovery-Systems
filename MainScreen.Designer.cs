@@ -86,12 +86,13 @@
             // 
             // exitAppButton
             // 
+            this.exitAppButton.BackColor = System.Drawing.Color.IndianRed;
             this.exitAppButton.Location = new System.Drawing.Point(587, 262);
             this.exitAppButton.Name = "exitAppButton";
             this.exitAppButton.Size = new System.Drawing.Size(90, 39);
             this.exitAppButton.TabIndex = 4;
             this.exitAppButton.Text = "Exit";
-            this.exitAppButton.UseVisualStyleBackColor = true;
+            this.exitAppButton.UseVisualStyleBackColor = false;
             this.exitAppButton.Click += new System.EventHandler(this.exitAppButton_Click);
             // 
             // MainScreen
