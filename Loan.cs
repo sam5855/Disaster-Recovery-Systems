@@ -106,24 +106,25 @@ namespace Disaster_Recovery_Solution
             //TotalFinancedWithFees = setTotalFinanced(repaymentMethod, amountBorrowed);
 
             //Method calls to set Amount Effecting Apr cells [I27 - I31]
-            AprAmountEffectingApr = setAprAmountEffectingApr(AprEffecting, AprAmount);
-            JonAmountEffectingApr = setJonAmountEffectingApr(JonEffecting, JonAmount);
-            Jon2AmountEffectingApr = setJon2AmountEffectingApr(Jon2Effecting, Jon2Amount);
-            AmountEffectingAprTotal = setAmountEffectingAprTotal(AprAmountEffectingApr, JonAmountEffectingApr, Jon2AmountEffectingApr);
+            AprAmountEffectingApr = SetAprAmountEffectingApr(AprEffecting, AprAmount);
+            JonAmountEffectingApr = SetJonAmountEffectingApr(JonEffecting, JonAmount);
+            Jon2AmountEffectingApr = SetJon2AmountEffectingApr(Jon2Effecting, Jon2Amount);
+            AmountEffectingAprTotal = SetAmountEffectingAprTotal(AprAmountEffectingApr, JonAmountEffectingApr, Jon2AmountEffectingApr);
 
             //Method calls to set Fee Collection Effecting Loan Amount cells [J27 - J31]
-            AprEffectingLoanAmount = setAprEffectingLoanAmount(AprCollectionMethod, AprAmount);
-            JonEffectingLoanAmount = setJonEffectingLoanAmount(JonCollectionMethod, JonAmount);
-            Jon2EffectingLoanAmount = setJon2EffectingLoanAmount(Jon2CollectionMethod, Jon2Amount);
-            FeeCollectionEffectingLoanAmountTotal = setFeeCollectionEffectingLoanAmountTotal(AprEffectingLoanAmount, JonEffectingLoanAmount, Jon2EffectingLoanAmount);
+            AprEffectingLoanAmount = SetAprEffectingLoanAmount(AprCollectionMethod, AprAmount);
+            JonEffectingLoanAmount = SetJonEffectingLoanAmount(JonCollectionMethod, JonAmount);
+            Jon2EffectingLoanAmount = SetJon2EffectingLoanAmount(Jon2CollectionMethod, Jon2Amount);
+            FeeCollectionEffectingLoanAmountTotal = SetFeeCollectionEffectingLoanAmountTotal(AprEffectingLoanAmount, JonEffectingLoanAmount, Jon2EffectingLoanAmount);
 
 
             //Method calls to set APR Fees Removed from Proceeds cells [K27 - K31]
-            AprRemovedFromProceeds = setAprRemovedFromProceeds(AprEffecting, AprEffectingLoanAmount);
-            JonRemovedFromProceeds = setJonRemovedFromProceeds(JonEffecting, JonEffectingLoanAmount);
-            Jon2RemovedFromProceeds = setJon2RemovedFromProceeds(Jon2Effecting, Jon2EffectingLoanAmount);
-            AprFeeRemovedFromProceedsTotal = setAprFeeRemovedFromProceedsTotal(AprRemovedFromProceeds, JonRemovedFromProceeds, Jon2RemovedFromProceeds);
+            AprRemovedFromProceeds = SetAprRemovedFromProceeds(AprEffecting, AprEffectingLoanAmount);
+            JonRemovedFromProceeds = SetJonRemovedFromProceeds(JonEffecting, JonEffectingLoanAmount);
+            Jon2RemovedFromProceeds = SetJon2RemovedFromProceeds(Jon2Effecting, Jon2EffectingLoanAmount);
+            AprFeeRemovedFromProceedsTotal = SetAprFeeRemovedFromProceedsTotal(AprRemovedFromProceeds, JonRemovedFromProceeds, Jon2RemovedFromProceeds);
 
+            
 
         }
 
@@ -132,16 +133,9 @@ namespace Disaster_Recovery_Solution
 
         //Class methods for calculations
         //Logic below works, constructor calls method to set variable. Need to build out correct logic for this. 
-        public static decimal setTotalFinanced(string repaymentMethod, decimal amountBorrowed)
+        public static decimal SetTotalFinanced(decimal aprFeeRemovedFromProceedsTotal, decimal amountBorrowed)
         {
-            if (repaymentMethod == "Term Loan (P&I)")
-            {
-                return 6.69m;
-            }
-            else
-            {
-                return 2.32m;
-            }
+            return amountBorrowed * aprFeeRemovedFromProceedsTotal;
 
         }
 
@@ -153,7 +147,7 @@ namespace Disaster_Recovery_Solution
 
 
         //Methods to calculate Amount Effecting Apr Fee cells[I27 - I31]
-        public static decimal setAprAmountEffectingApr(string aprEffecting, decimal aprAmount)
+        public static decimal SetAprAmountEffectingApr(string aprEffecting, decimal aprAmount)
         {
             if (aprEffecting == "Yes")
             {
@@ -164,7 +158,7 @@ namespace Disaster_Recovery_Solution
                 return 0.00m;
             }
         }
-        public static decimal setJonAmountEffectingApr(string jonEffecting, decimal jonAmount)
+        public static decimal SetJonAmountEffectingApr(string jonEffecting, decimal jonAmount)
         {
             if (jonEffecting == "Yes")
             {
@@ -175,7 +169,7 @@ namespace Disaster_Recovery_Solution
                 return 0.00m;
             }
         }
-        public static decimal setJon2AmountEffectingApr(string jon2Effecting, decimal jon2Amount)
+        public static decimal SetJon2AmountEffectingApr(string jon2Effecting, decimal jon2Amount)
         {
             if (jon2Effecting == "Yes")
             {
@@ -186,7 +180,7 @@ namespace Disaster_Recovery_Solution
                 return 0.00m;
             }
         }
-        public static decimal setAmountEffectingAprTotal(decimal aprAmountEffectingApr, decimal jonAmountEffectingApr, decimal jon2AmountEffectingApr)
+        public static decimal SetAmountEffectingAprTotal(decimal aprAmountEffectingApr, decimal jonAmountEffectingApr, decimal jon2AmountEffectingApr)
         {
             return aprAmountEffectingApr + jonAmountEffectingApr + jon2AmountEffectingApr;
         }
@@ -194,7 +188,7 @@ namespace Disaster_Recovery_Solution
 
         //Methods to calculate Fee Collection Effecting Loan Amounts cells[J27 - J31]
         //Double check the negative amount calculation in this function
-        public static decimal setAprEffectingLoanAmount(string aprCollectionMethod, decimal aprAmount)
+        public static decimal SetAprEffectingLoanAmount(string aprCollectionMethod, decimal aprAmount)
         {
             if (aprCollectionMethod == "Added to Amount Financed")
             {
@@ -209,7 +203,7 @@ namespace Disaster_Recovery_Solution
                 return 0.00m;
             }
         }
-        public static decimal setJonEffectingLoanAmount(string jonCollectionMethod, decimal jonAmount)
+        public static decimal SetJonEffectingLoanAmount(string jonCollectionMethod, decimal jonAmount)
         {
             if (jonCollectionMethod == "Added to Amount Financed")
             {
@@ -224,7 +218,7 @@ namespace Disaster_Recovery_Solution
                 return 0.00m;
             }
         }
-        public static decimal setJon2EffectingLoanAmount(string jon2CollectionMethod, decimal jon2Amount)
+        public static decimal SetJon2EffectingLoanAmount(string jon2CollectionMethod, decimal jon2Amount)
         {
             if (jon2CollectionMethod == "Added to Amount Financed")
             {
@@ -239,7 +233,7 @@ namespace Disaster_Recovery_Solution
                 return 0.00m;
             }
         }
-        public static decimal setFeeCollectionEffectingLoanAmountTotal(decimal aprEffectingLoanAmount, decimal jonEffectingLoanAmount, decimal jon2EffectingLoanAmount)
+        public static decimal SetFeeCollectionEffectingLoanAmountTotal(decimal aprEffectingLoanAmount, decimal jonEffectingLoanAmount, decimal jon2EffectingLoanAmount)
         {
             return aprEffectingLoanAmount + jonEffectingLoanAmount + jon2EffectingLoanAmount;
         }
@@ -247,7 +241,7 @@ namespace Disaster_Recovery_Solution
 
 
         //Methods to calculate APR Fee Removed From Proceeds Amounts cells[K27 - K31]
-        public static decimal setAprRemovedFromProceeds(string aprEffecting, decimal aprEffectingLoanAmount)
+        public static decimal SetAprRemovedFromProceeds(string aprEffecting, decimal aprEffectingLoanAmount)
         {
             if (aprEffecting == "Yes")
             {
@@ -258,7 +252,7 @@ namespace Disaster_Recovery_Solution
                 return aprEffectingLoanAmount;
             }
         }
-        public static decimal setJonRemovedFromProceeds(string jonEffecting, decimal jonEffectingLoanAmount)
+        public static decimal SetJonRemovedFromProceeds(string jonEffecting, decimal jonEffectingLoanAmount)
         {
             if (jonEffecting == "Yes")
             {
@@ -269,7 +263,7 @@ namespace Disaster_Recovery_Solution
                 return jonEffectingLoanAmount;
             }
         }
-        public static decimal setJon2RemovedFromProceeds(string jon2Effecting, decimal jon2EffectingLoanAmount)
+        public static decimal SetJon2RemovedFromProceeds(string jon2Effecting, decimal jon2EffectingLoanAmount)
         {
             if (jon2Effecting == "Yes")
             {
@@ -280,7 +274,7 @@ namespace Disaster_Recovery_Solution
                 return jon2EffectingLoanAmount;
             }
         }
-        public static decimal setAprFeeRemovedFromProceedsTotal(decimal aprRemovedFromProceeds, decimal jonRemovedFromProceeds, decimal jon2RemovedFromProceeds)
+        public static decimal SetAprFeeRemovedFromProceedsTotal(decimal aprRemovedFromProceeds, decimal jonRemovedFromProceeds, decimal jon2RemovedFromProceeds)
         {
             return aprRemovedFromProceeds + jonRemovedFromProceeds + jon2RemovedFromProceeds;
         }
