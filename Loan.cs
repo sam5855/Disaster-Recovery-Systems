@@ -103,7 +103,7 @@ namespace Disaster_Recovery_Solution
 
 
             //Methods to calculate loan attributes 
-            //TotalFinancedWithFees = setTotalFinanced(repaymentMethod, amountBorrowed);
+            
 
             //Method calls to set Amount Effecting Apr cells [I27 - I31]
             AprAmountEffectingApr = SetAprAmountEffectingApr(AprEffecting, AprAmount);
@@ -124,7 +124,8 @@ namespace Disaster_Recovery_Solution
             Jon2RemovedFromProceeds = SetJon2RemovedFromProceeds(Jon2Effecting, Jon2EffectingLoanAmount);
             AprFeeRemovedFromProceedsTotal = SetAprFeeRemovedFromProceedsTotal(AprRemovedFromProceeds, JonRemovedFromProceeds, Jon2RemovedFromProceeds);
 
-            
+            //Method calls to set calculated attributes at top of spreadsheet 
+            TotalFinancedWithFees = SetTotalFinancedWithFees(AprFeeRemovedFromProceedsTotal, AmountBorrowed);
 
         }
 
@@ -133,9 +134,9 @@ namespace Disaster_Recovery_Solution
 
         //Class methods for calculations
         //Logic below works, constructor calls method to set variable. Need to build out correct logic for this. 
-        public static decimal SetTotalFinanced(decimal aprFeeRemovedFromProceedsTotal, decimal amountBorrowed)
+        public static decimal SetTotalFinancedWithFees(decimal aprFeeRemovedFromProceedsTotal, decimal amountBorrowed)
         {
-            return amountBorrowed * aprFeeRemovedFromProceedsTotal;
+            return amountBorrowed + aprFeeRemovedFromProceedsTotal;
 
         }
 

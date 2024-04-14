@@ -130,7 +130,7 @@ namespace Disaster_Recovery_Solution
             jonPayableBy, jon2PayableBy, aprAmount, jonAmount, jon2Amount, aprEffecting, jonEffecting, jon2Effecting);
             Inventory.AddLoan(newLoan);
 
-            //Loan.setTotalFinanced(repaymentMethod);
+           
 
 
         }
