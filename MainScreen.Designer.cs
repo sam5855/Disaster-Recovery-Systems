@@ -97,13 +97,16 @@
             // 
             // MainScreen
             // 
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(689, 313);
             this.Controls.Add(this.exitAppButton);
             this.Controls.Add(this.formBuilderButton);
             this.Controls.Add(this.entityCreatorButton);
             this.Controls.Add(this.calcEngineButton);
             this.Controls.Add(this.label2);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "MainScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Disaster Recovery Solutions";
             this.ResumeLayout(false);
             this.PerformLayout();

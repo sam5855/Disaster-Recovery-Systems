@@ -81,24 +81,24 @@
             this.exportCSVButton = new System.Windows.Forms.Button();
             this.deleteLoanButton = new System.Windows.Forms.Button();
             this.loanDetailsGroupBox = new System.Windows.Forms.GroupBox();
+            this.textBoxAprWithFees = new System.Windows.Forms.TextBox();
+            this.textBoxTotalFinanceCharge = new System.Windows.Forms.TextBox();
+            this.textBoxAprEffectingFee = new System.Windows.Forms.TextBox();
+            this.textBoxAprNoFeesIncluded = new System.Windows.Forms.TextBox();
+            this.textBoxTotalAmountPaid = new System.Windows.Forms.TextBox();
+            this.textBoxTotalPrincipalPaid = new System.Windows.Forms.TextBox();
+            this.textBoxTotalInterestPaid = new System.Windows.Forms.TextBox();
+            this.textBoxEstimatedPayment = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.textBoxTotalFinancedWithFees = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBoxEstimatedPayment = new System.Windows.Forms.TextBox();
-            this.textBoxTotalInterestPaid = new System.Windows.Forms.TextBox();
-            this.textBoxTotalPrincipalPaid = new System.Windows.Forms.TextBox();
-            this.textBoxTotalAmountPaid = new System.Windows.Forms.TextBox();
-            this.textBoxAprNoFeesIncluded = new System.Windows.Forms.TextBox();
-            this.textBoxAprEffectingFee = new System.Windows.Forms.TextBox();
-            this.textBoxTotalFinanceCharge = new System.Windows.Forms.TextBox();
-            this.textBoxAprWithFees = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -695,6 +695,158 @@
             this.loanDetailsGroupBox.TabStop = false;
             this.loanDetailsGroupBox.Text = "Loan Details";
             // 
+            // textBoxAprWithFees
+            // 
+            this.textBoxAprWithFees.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxAprWithFees.Location = new System.Drawing.Point(499, 115);
+            this.textBoxAprWithFees.Name = "textBoxAprWithFees";
+            this.textBoxAprWithFees.ReadOnly = true;
+            this.textBoxAprWithFees.Size = new System.Drawing.Size(106, 23);
+            this.textBoxAprWithFees.TabIndex = 49;
+            // 
+            // textBoxTotalFinanceCharge
+            // 
+            this.textBoxTotalFinanceCharge.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxTotalFinanceCharge.Location = new System.Drawing.Point(499, 84);
+            this.textBoxTotalFinanceCharge.Name = "textBoxTotalFinanceCharge";
+            this.textBoxTotalFinanceCharge.ReadOnly = true;
+            this.textBoxTotalFinanceCharge.Size = new System.Drawing.Size(106, 23);
+            this.textBoxTotalFinanceCharge.TabIndex = 48;
+            // 
+            // textBoxAprEffectingFee
+            // 
+            this.textBoxAprEffectingFee.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxAprEffectingFee.Location = new System.Drawing.Point(499, 55);
+            this.textBoxAprEffectingFee.Name = "textBoxAprEffectingFee";
+            this.textBoxAprEffectingFee.ReadOnly = true;
+            this.textBoxAprEffectingFee.Size = new System.Drawing.Size(106, 23);
+            this.textBoxAprEffectingFee.TabIndex = 47;
+            // 
+            // textBoxAprNoFeesIncluded
+            // 
+            this.textBoxAprNoFeesIncluded.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxAprNoFeesIncluded.Location = new System.Drawing.Point(499, 21);
+            this.textBoxAprNoFeesIncluded.Name = "textBoxAprNoFeesIncluded";
+            this.textBoxAprNoFeesIncluded.ReadOnly = true;
+            this.textBoxAprNoFeesIncluded.Size = new System.Drawing.Size(106, 23);
+            this.textBoxAprNoFeesIncluded.TabIndex = 46;
+            // 
+            // textBoxTotalAmountPaid
+            // 
+            this.textBoxTotalAmountPaid.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxTotalAmountPaid.Location = new System.Drawing.Point(218, 150);
+            this.textBoxTotalAmountPaid.Name = "textBoxTotalAmountPaid";
+            this.textBoxTotalAmountPaid.ReadOnly = true;
+            this.textBoxTotalAmountPaid.Size = new System.Drawing.Size(106, 23);
+            this.textBoxTotalAmountPaid.TabIndex = 45;
+            // 
+            // textBoxTotalPrincipalPaid
+            // 
+            this.textBoxTotalPrincipalPaid.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxTotalPrincipalPaid.Location = new System.Drawing.Point(218, 115);
+            this.textBoxTotalPrincipalPaid.Name = "textBoxTotalPrincipalPaid";
+            this.textBoxTotalPrincipalPaid.ReadOnly = true;
+            this.textBoxTotalPrincipalPaid.Size = new System.Drawing.Size(106, 23);
+            this.textBoxTotalPrincipalPaid.TabIndex = 44;
+            // 
+            // textBoxTotalInterestPaid
+            // 
+            this.textBoxTotalInterestPaid.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxTotalInterestPaid.Location = new System.Drawing.Point(218, 84);
+            this.textBoxTotalInterestPaid.Name = "textBoxTotalInterestPaid";
+            this.textBoxTotalInterestPaid.ReadOnly = true;
+            this.textBoxTotalInterestPaid.Size = new System.Drawing.Size(106, 23);
+            this.textBoxTotalInterestPaid.TabIndex = 43;
+            // 
+            // textBoxEstimatedPayment
+            // 
+            this.textBoxEstimatedPayment.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBoxEstimatedPayment.Location = new System.Drawing.Point(218, 55);
+            this.textBoxEstimatedPayment.Name = "textBoxEstimatedPayment";
+            this.textBoxEstimatedPayment.ReadOnly = true;
+            this.textBoxEstimatedPayment.Size = new System.Drawing.Size(106, 23);
+            this.textBoxEstimatedPayment.TabIndex = 42;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label29.Location = new System.Drawing.Point(405, 116);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(88, 17);
+            this.label29.TabIndex = 41;
+            this.label29.Text = "APR with Fees";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label28.Location = new System.Drawing.Point(364, 85);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(129, 17);
+            this.label28.TabIndex = 40;
+            this.label28.Text = "Total Finance Charge";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label27.Location = new System.Drawing.Point(373, 56);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(120, 17);
+            this.label27.TabIndex = 39;
+            this.label27.Text = "APR Effecting Fee $";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label26.Location = new System.Drawing.Point(351, 23);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(142, 17);
+            this.label26.TabIndex = 38;
+            this.label26.Text = "APR (No fees Inlcuded)";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label25.Location = new System.Drawing.Point(98, 151);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(114, 17);
+            this.label25.TabIndex = 37;
+            this.label25.Text = "Total Amount Paid";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label24.Location = new System.Drawing.Point(94, 116);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(118, 17);
+            this.label24.TabIndex = 36;
+            this.label24.Text = "Total Principal Paid";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label23.Location = new System.Drawing.Point(100, 85);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(112, 17);
+            this.label23.TabIndex = 35;
+            this.label23.Text = "Total Interest Paid";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label22.Location = new System.Drawing.Point(94, 56);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(118, 17);
+            this.label22.TabIndex = 34;
+            this.label22.Text = "Estimated Payment";
+            // 
             // textBoxTotalFinancedWithFees
             // 
             this.textBoxTotalFinancedWithFees.BackColor = System.Drawing.SystemColors.HighlightText;
@@ -714,158 +866,6 @@
             this.label21.TabIndex = 33;
             this.label21.Text = "Total Proceeds Financed with Fee\'s";
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label22.Location = new System.Drawing.Point(94, 56);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(118, 17);
-            this.label22.TabIndex = 34;
-            this.label22.Text = "Estimated Payment";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(100, 85);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(112, 17);
-            this.label23.TabIndex = 35;
-            this.label23.Text = "Total Interest Paid";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(94, 116);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(118, 17);
-            this.label24.TabIndex = 36;
-            this.label24.Text = "Total Principal Paid";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(98, 151);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(114, 17);
-            this.label25.TabIndex = 37;
-            this.label25.Text = "Total Amount Paid";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(351, 23);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(142, 17);
-            this.label26.TabIndex = 38;
-            this.label26.Text = "APR (No fees Inlcuded)";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label27.Location = new System.Drawing.Point(373, 56);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(120, 17);
-            this.label27.TabIndex = 39;
-            this.label27.Text = "APR Effecting Fee $";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label28.Location = new System.Drawing.Point(364, 85);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(129, 17);
-            this.label28.TabIndex = 40;
-            this.label28.Text = "Total Finance Charge";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label29.Location = new System.Drawing.Point(405, 116);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(88, 17);
-            this.label29.TabIndex = 41;
-            this.label29.Text = "APR with Fees";
-            // 
-            // textBoxEstimatedPayment
-            // 
-            this.textBoxEstimatedPayment.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxEstimatedPayment.Location = new System.Drawing.Point(218, 55);
-            this.textBoxEstimatedPayment.Name = "textBoxEstimatedPayment";
-            this.textBoxEstimatedPayment.ReadOnly = true;
-            this.textBoxEstimatedPayment.Size = new System.Drawing.Size(106, 23);
-            this.textBoxEstimatedPayment.TabIndex = 42;
-            // 
-            // textBoxTotalInterestPaid
-            // 
-            this.textBoxTotalInterestPaid.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxTotalInterestPaid.Location = new System.Drawing.Point(218, 84);
-            this.textBoxTotalInterestPaid.Name = "textBoxTotalInterestPaid";
-            this.textBoxTotalInterestPaid.ReadOnly = true;
-            this.textBoxTotalInterestPaid.Size = new System.Drawing.Size(106, 23);
-            this.textBoxTotalInterestPaid.TabIndex = 43;
-            // 
-            // textBoxTotalPrincipalPaid
-            // 
-            this.textBoxTotalPrincipalPaid.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxTotalPrincipalPaid.Location = new System.Drawing.Point(218, 115);
-            this.textBoxTotalPrincipalPaid.Name = "textBoxTotalPrincipalPaid";
-            this.textBoxTotalPrincipalPaid.ReadOnly = true;
-            this.textBoxTotalPrincipalPaid.Size = new System.Drawing.Size(106, 23);
-            this.textBoxTotalPrincipalPaid.TabIndex = 44;
-            // 
-            // textBoxTotalAmountPaid
-            // 
-            this.textBoxTotalAmountPaid.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxTotalAmountPaid.Location = new System.Drawing.Point(218, 150);
-            this.textBoxTotalAmountPaid.Name = "textBoxTotalAmountPaid";
-            this.textBoxTotalAmountPaid.ReadOnly = true;
-            this.textBoxTotalAmountPaid.Size = new System.Drawing.Size(106, 23);
-            this.textBoxTotalAmountPaid.TabIndex = 45;
-            // 
-            // textBoxAprNoFeesIncluded
-            // 
-            this.textBoxAprNoFeesIncluded.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxAprNoFeesIncluded.Location = new System.Drawing.Point(499, 21);
-            this.textBoxAprNoFeesIncluded.Name = "textBoxAprNoFeesIncluded";
-            this.textBoxAprNoFeesIncluded.ReadOnly = true;
-            this.textBoxAprNoFeesIncluded.Size = new System.Drawing.Size(106, 23);
-            this.textBoxAprNoFeesIncluded.TabIndex = 46;
-            // 
-            // textBoxAprEffectingFee
-            // 
-            this.textBoxAprEffectingFee.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxAprEffectingFee.Location = new System.Drawing.Point(499, 55);
-            this.textBoxAprEffectingFee.Name = "textBoxAprEffectingFee";
-            this.textBoxAprEffectingFee.ReadOnly = true;
-            this.textBoxAprEffectingFee.Size = new System.Drawing.Size(106, 23);
-            this.textBoxAprEffectingFee.TabIndex = 47;
-            // 
-            // textBoxTotalFinanceCharge
-            // 
-            this.textBoxTotalFinanceCharge.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxTotalFinanceCharge.Location = new System.Drawing.Point(499, 84);
-            this.textBoxTotalFinanceCharge.Name = "textBoxTotalFinanceCharge";
-            this.textBoxTotalFinanceCharge.ReadOnly = true;
-            this.textBoxTotalFinanceCharge.Size = new System.Drawing.Size(106, 23);
-            this.textBoxTotalFinanceCharge.TabIndex = 48;
-            // 
-            // textBoxAprWithFees
-            // 
-            this.textBoxAprWithFees.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.textBoxAprWithFees.Location = new System.Drawing.Point(499, 115);
-            this.textBoxAprWithFees.Name = "textBoxAprWithFees";
-            this.textBoxAprWithFees.ReadOnly = true;
-            this.textBoxAprWithFees.Size = new System.Drawing.Size(106, 23);
-            this.textBoxAprWithFees.TabIndex = 49;
-            // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -884,6 +884,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "CalcForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Disaster Recovery Solutions";
             this.Load += new System.EventHandler(this.CalcForm_Load);
             this.groupBox1.ResumeLayout(false);
