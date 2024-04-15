@@ -620,6 +620,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DarkOrange;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Location = new System.Drawing.Point(1251, 826);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 39);
@@ -631,6 +632,7 @@
             // calculateLoanButton
             // 
             this.calculateLoanButton.BackColor = System.Drawing.Color.ForestGreen;
+            this.calculateLoanButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.calculateLoanButton.Location = new System.Drawing.Point(42, 335);
             this.calculateLoanButton.Name = "calculateLoanButton";
             this.calculateLoanButton.Size = new System.Drawing.Size(109, 39);
@@ -641,26 +643,31 @@
             // 
             // importCSVButton
             // 
+            this.importCSVButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.importCSVButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.importCSVButton.Location = new System.Drawing.Point(42, 621);
             this.importCSVButton.Name = "importCSVButton";
             this.importCSVButton.Size = new System.Drawing.Size(109, 39);
             this.importCSVButton.TabIndex = 19;
             this.importCSVButton.Text = "Import CSV";
-            this.importCSVButton.UseVisualStyleBackColor = true;
+            this.importCSVButton.UseVisualStyleBackColor = false;
             // 
             // exportCSVButton
             // 
+            this.exportCSVButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.exportCSVButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.exportCSVButton.Location = new System.Drawing.Point(157, 621);
             this.exportCSVButton.Name = "exportCSVButton";
             this.exportCSVButton.Size = new System.Drawing.Size(109, 39);
             this.exportCSVButton.TabIndex = 20;
             this.exportCSVButton.Text = "Export CSV";
-            this.exportCSVButton.UseVisualStyleBackColor = true;
+            this.exportCSVButton.UseVisualStyleBackColor = false;
             this.exportCSVButton.Click += new System.EventHandler(this.exportCSVButton_Click);
             // 
             // deleteLoanButton
             // 
             this.deleteLoanButton.BackColor = System.Drawing.Color.IndianRed;
+            this.deleteLoanButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deleteLoanButton.Location = new System.Drawing.Point(560, 621);
             this.deleteLoanButton.Name = "deleteLoanButton";
             this.deleteLoanButton.Size = new System.Drawing.Size(109, 39);
@@ -870,6 +877,7 @@
             // clearInputsButton
             // 
             this.clearInputsButton.BackColor = System.Drawing.Color.IndianRed;
+            this.clearInputsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clearInputsButton.Location = new System.Drawing.Point(157, 335);
             this.clearInputsButton.Name = "clearInputsButton";
             this.clearInputsButton.Size = new System.Drawing.Size(109, 39);
@@ -882,6 +890,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1372, 877);
             this.Controls.Add(this.clearInputsButton);
             this.Controls.Add(this.loanDetailsGroupBox);

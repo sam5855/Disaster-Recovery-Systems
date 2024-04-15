@@ -58,35 +58,42 @@
             // 
             // calcEngineButton
             // 
+            this.calcEngineButton.BackColor = System.Drawing.Color.LightGreen;
+            this.calcEngineButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.calcEngineButton.Location = new System.Drawing.Point(109, 155);
             this.calcEngineButton.Name = "calcEngineButton";
             this.calcEngineButton.Size = new System.Drawing.Size(125, 47);
             this.calcEngineButton.TabIndex = 1;
             this.calcEngineButton.Text = "Calc Engine";
-            this.calcEngineButton.UseVisualStyleBackColor = true;
+            this.calcEngineButton.UseVisualStyleBackColor = false;
             this.calcEngineButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // entityCreatorButton
             // 
+            this.entityCreatorButton.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.entityCreatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.entityCreatorButton.Location = new System.Drawing.Point(287, 155);
             this.entityCreatorButton.Name = "entityCreatorButton";
             this.entityCreatorButton.Size = new System.Drawing.Size(125, 47);
             this.entityCreatorButton.TabIndex = 2;
             this.entityCreatorButton.Text = "Entity Creator";
-            this.entityCreatorButton.UseVisualStyleBackColor = true;
+            this.entityCreatorButton.UseVisualStyleBackColor = false;
             // 
             // formBuilderButton
             // 
+            this.formBuilderButton.BackColor = System.Drawing.Color.MediumPurple;
+            this.formBuilderButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.formBuilderButton.Location = new System.Drawing.Point(468, 155);
             this.formBuilderButton.Name = "formBuilderButton";
             this.formBuilderButton.Size = new System.Drawing.Size(125, 47);
             this.formBuilderButton.TabIndex = 3;
             this.formBuilderButton.Text = "Form Builder";
-            this.formBuilderButton.UseVisualStyleBackColor = true;
+            this.formBuilderButton.UseVisualStyleBackColor = false;
             // 
             // exitAppButton
             // 
             this.exitAppButton.BackColor = System.Drawing.Color.IndianRed;
+            this.exitAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.exitAppButton.Location = new System.Drawing.Point(587, 262);
             this.exitAppButton.Name = "exitAppButton";
             this.exitAppButton.Size = new System.Drawing.Size(90, 39);
