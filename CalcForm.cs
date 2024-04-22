@@ -11,6 +11,7 @@ using CsvHelper;
 using System.IO;
 using System.Globalization;
 
+
 namespace Disaster_Recovery_Solution
 {
     public partial class CalcForm : Form
@@ -170,7 +171,7 @@ namespace Disaster_Recovery_Solution
         {
             //var csvPath = Path.Combine("C:\\Users\\Sam\\Downloads\\", $"Loans-{DateTime.Today.ToFileTime}.csv");
             //using (var writer = new StreamWriter(csvPath))
-            using (var writer = new StreamWriter($"C:\\Users\\Sam\\Downloads\\loans.csv"))
+            using (var writer = new StreamWriter($"C:\\Users\\Sam\\Downloads\\LoanID-{DateTime.Now.ToString("yyy-MM-dd")}.csv"))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
                 csv.WriteRecords(Inventory.AllLoans);

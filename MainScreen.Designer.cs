@@ -60,7 +60,7 @@
             // calcEngineButton
             // 
             this.calcEngineButton.BackColor = System.Drawing.Color.LightGreen;
-            this.calcEngineButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.calcEngineButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calcEngineButton.Location = new System.Drawing.Point(109, 155);
             this.calcEngineButton.Name = "calcEngineButton";
             this.calcEngineButton.Size = new System.Drawing.Size(125, 47);
@@ -72,7 +72,7 @@
             // entityCreatorButton
             // 
             this.entityCreatorButton.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.entityCreatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.entityCreatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.entityCreatorButton.Location = new System.Drawing.Point(287, 155);
             this.entityCreatorButton.Name = "entityCreatorButton";
             this.entityCreatorButton.Size = new System.Drawing.Size(125, 47);
@@ -83,7 +83,7 @@
             // formBuilderButton
             // 
             this.formBuilderButton.BackColor = System.Drawing.Color.MediumPurple;
-            this.formBuilderButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.formBuilderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.formBuilderButton.Location = new System.Drawing.Point(468, 155);
             this.formBuilderButton.Name = "formBuilderButton";
             this.formBuilderButton.Size = new System.Drawing.Size(125, 47);
@@ -94,7 +94,7 @@
             // exitAppButton
             // 
             this.exitAppButton.BackColor = System.Drawing.Color.IndianRed;
-            this.exitAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exitAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitAppButton.Location = new System.Drawing.Point(587, 262);
             this.exitAppButton.Name = "exitAppButton";
             this.exitAppButton.Size = new System.Drawing.Size(90, 39);

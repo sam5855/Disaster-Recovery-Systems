@@ -101,6 +101,8 @@
             this.textBoxTotalFinancedWithFees = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.clearInputsButton = new System.Windows.Forms.Button();
+            this.exportProgressButton = new System.Windows.Forms.Button();
+            this.importProgressButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -620,8 +622,8 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkOrange;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(1251, 826);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 39);
@@ -632,9 +634,9 @@
             // 
             // calculateLoanButton
             // 
-            this.calculateLoanButton.BackColor = System.Drawing.Color.ForestGreen;
-            this.calculateLoanButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.calculateLoanButton.Location = new System.Drawing.Point(42, 335);
+            this.calculateLoanButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.calculateLoanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.calculateLoanButton.Location = new System.Drawing.Point(1128, 335);
             this.calculateLoanButton.Name = "calculateLoanButton";
             this.calculateLoanButton.Size = new System.Drawing.Size(109, 39);
             this.calculateLoanButton.TabIndex = 18;
@@ -645,7 +647,7 @@
             // importCSVButton
             // 
             this.importCSVButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.importCSVButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.importCSVButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.importCSVButton.Location = new System.Drawing.Point(42, 621);
             this.importCSVButton.Name = "importCSVButton";
             this.importCSVButton.Size = new System.Drawing.Size(109, 39);
@@ -656,7 +658,7 @@
             // exportCSVButton
             // 
             this.exportCSVButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.exportCSVButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exportCSVButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exportCSVButton.Location = new System.Drawing.Point(157, 621);
             this.exportCSVButton.Name = "exportCSVButton";
             this.exportCSVButton.Size = new System.Drawing.Size(109, 39);
@@ -667,8 +669,8 @@
             // 
             // deleteLoanButton
             // 
-            this.deleteLoanButton.BackColor = System.Drawing.Color.IndianRed;
-            this.deleteLoanButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.deleteLoanButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.deleteLoanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteLoanButton.Location = new System.Drawing.Point(560, 621);
             this.deleteLoanButton.Name = "deleteLoanButton";
             this.deleteLoanButton.Size = new System.Drawing.Size(109, 39);
@@ -877,9 +879,9 @@
             // 
             // clearInputsButton
             // 
-            this.clearInputsButton.BackColor = System.Drawing.Color.IndianRed;
-            this.clearInputsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.clearInputsButton.Location = new System.Drawing.Point(157, 335);
+            this.clearInputsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.clearInputsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearInputsButton.Location = new System.Drawing.Point(1243, 335);
             this.clearInputsButton.Name = "clearInputsButton";
             this.clearInputsButton.Size = new System.Drawing.Size(109, 39);
             this.clearInputsButton.TabIndex = 23;
@@ -887,12 +889,37 @@
             this.clearInputsButton.UseVisualStyleBackColor = false;
             this.clearInputsButton.Click += new System.EventHandler(this.clearInputsButton_Click);
             // 
+            // exportProgressButton
+            // 
+            this.exportProgressButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.exportProgressButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportProgressButton.Location = new System.Drawing.Point(42, 335);
+            this.exportProgressButton.Name = "exportProgressButton";
+            this.exportProgressButton.Size = new System.Drawing.Size(109, 39);
+            this.exportProgressButton.TabIndex = 24;
+            this.exportProgressButton.Text = "Save Progress";
+            this.exportProgressButton.UseVisualStyleBackColor = false;
+            // 
+            // importProgressButton
+            // 
+            this.importProgressButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.importProgressButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.importProgressButton.Location = new System.Drawing.Point(157, 335);
+            this.importProgressButton.Name = "importProgressButton";
+            this.importProgressButton.Size = new System.Drawing.Size(109, 39);
+            this.importProgressButton.TabIndex = 25;
+            this.importProgressButton.Text = "Load Inputs";
+            this.importProgressButton.UseVisualStyleBackColor = false;
+            // 
             // CalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1372, 877);
+            this.Controls.Add(this.importProgressButton);
+            this.Controls.Add(this.exportProgressButton);
             this.Controls.Add(this.clearInputsButton);
             this.Controls.Add(this.loanDetailsGroupBox);
             this.Controls.Add(this.deleteLoanButton);
@@ -999,5 +1026,7 @@
         private TextBox textBoxTotalInterestPaid;
         private TextBox textBoxEstimatedPayment;
         private Button clearInputsButton;
+        private Button exportProgressButton;
+        private Button importProgressButton;
     }
 }

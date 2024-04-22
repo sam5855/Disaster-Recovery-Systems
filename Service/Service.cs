@@ -4,15 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Disaster_Recovery_Solution
+namespace Disaster_Recovery_Solution.Service
 {
-    internal class Calc
+    class Service
     {
-       
-
-
-
-
-
     }
 }
