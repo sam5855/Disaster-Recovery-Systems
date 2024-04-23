@@ -899,6 +899,7 @@
             this.exportProgressButton.TabIndex = 24;
             this.exportProgressButton.Text = "Save Progress";
             this.exportProgressButton.UseVisualStyleBackColor = false;
+            this.exportProgressButton.Click += new System.EventHandler(this.exportProgressButton_Click);
             // 
             // importProgressButton
             // 
@@ -910,6 +911,7 @@
             this.importProgressButton.TabIndex = 25;
             this.importProgressButton.Text = "Load Inputs";
             this.importProgressButton.UseVisualStyleBackColor = false;
+            this.importProgressButton.Click += new System.EventHandler(this.importProgressButton_Click);
             // 
             // CalcForm
             // 
@@ -985,8 +987,6 @@
         private TextBox amountBorrowedTextBox;
         private TextBox amortizedTermTextBox;
         private TextBox loanTermTextBox;
-        private DateTimePicker loanDatePicker;
-        private TextBox initialRateTextBox;
         private TextBox paymentAmountOverrideTextBox;
         private DateTimePicker maturityDatePicker;
         private DateTimePicker firstPaymentDatePicker;
@@ -1028,5 +1028,7 @@
         private Button clearInputsButton;
         private Button exportProgressButton;
         private Button importProgressButton;
+        private DateTimePicker loanDatePicker;
+        public TextBox initialRateTextBox;
     }
 }

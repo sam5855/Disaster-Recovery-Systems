@@ -32,5 +32,10 @@ namespace Disaster_Recovery_Solution
         {
             Close();
         }
+
+        private void MainScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

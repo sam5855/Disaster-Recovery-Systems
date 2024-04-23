@@ -212,5 +212,67 @@ namespace Disaster_Recovery_Solution
                     comboBox.Text = string.Empty;
             }
         }
+
+
+        //Loads Text file to populate input fields
+        private void importProgressButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.InitialDirectory = @"C:\";
+            openFile.Title = "Select File to Import";
+            //openFile.Filter = "Text Files Only (*.txt) | *.txt";
+            openFile.DefaultExt = "txt";
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                
+
+                var lines = File.ReadAllLines(openFile.FileName);
+                foreach (var line in lines)
+                {
+                    var col = line.Split(',');
+                    loanDatePicker.Text = col[0];
+                    initialRateTextBox.Text = col[1];
+                    repaymentMethodComboBox.Text = col[2];
+                    loanTermTextBox.Text = col[3];
+                    amortizedTermTextBox.Text = col[4];
+                    amountBorrowedTextBox.Text = col[5];
+                    accrualMethodComboBox.Text = col[6];
+                    paymentFreqComboBox.Text = col[7];
+                    firstPaymentDatePicker.Text = col[8];
+                    maturityDatePicker.Text = col[9];
+                    paymentAmountOverrideTextBox.Text = col[10];
+                    aprEffectingCollectionComboBox.Text = col[11];
+                    aprPayableComboBox.Text = col[12];
+                    aprAmountTextBox.Text = col[13];
+                    aprAprComboBox.Text = col[14];
+                    jonCollectionComboBox.Text = col[15];
+                    jonPayableComboBox.Text = col[16];
+                    jonAmountTextBox.Text = col[17];
+                    jonAprComboBox.Text = col[18];
+                    jon2CollectionComboBox.Text = col[19];
+                    jon2PayableComboBox.Text= col[20];
+                    jon2AmountTextBox.Text = col[21];
+                    jon2AprComboBox.Text = col[22];
+                }
+
+            }
+
+
+        }
+
+        //Saves progress to text file
+        private void exportProgressButton_Click(object sender, EventArgs e)
+        {
+            //StreamWriter sw = new StreamWriter(Application);
+            using (var writer = new StreamWriter($"C:\\Users\\Sam\\Downloads\\LoanID-{DateTime.Now.ToString("yyy-MM-dd")}.txt"))
+            {
+                writer.WriteLine(loanDatePicker.Text + "," + initialRateTextBox.Text + "," + repaymentMethodComboBox.Text + "," + loanTermTextBox.Text + 
+                    "," + amortizedTermTextBox.Text + "," + amountBorrowedTextBox.Text + "," + accrualMethodComboBox.Text + "," + paymentFreqComboBox.Text +
+                    "," + firstPaymentDatePicker.Text + "," + maturityDatePicker.Text + "," + paymentAmountOverrideTextBox.Text + "," + aprEffectingCollectionComboBox.Text + 
+                    "," + aprPayableComboBox.Text + "," + aprAmountTextBox.Text + "," + aprAprComboBox.Text + "," + jonCollectionComboBox.Text + "," + jonPayableComboBox.Text + 
+                    "," + jonAmountTextBox.Text + "," + jonAprComboBox.Text + "," + jon2CollectionComboBox.Text + "," + jon2PayableComboBox.Text + "," + jon2AmountTextBox.Text + "," + jon2AprComboBox.Text);
+            }
+        }
     }
 }
